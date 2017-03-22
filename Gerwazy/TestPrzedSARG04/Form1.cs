@@ -76,5 +76,15 @@ namespace TestPrzedSARG04
             saveFileDialog1.ShowDialog();
             textBox3.Text = saveFileDialog1.FileName;
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
