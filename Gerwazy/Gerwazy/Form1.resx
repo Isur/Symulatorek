@@ -141,7 +141,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;button_start.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="label_decode.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -168,7 +168,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label_decode.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="checkBox_random.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -195,7 +195,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;checkBox_random.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="checkBox_periodicity.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -222,6 +222,93 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;checkBox_periodicity.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="numericUpDown.Location" type="System.Drawing.Point, System.Drawing">
+    <value>436, 148</value>
+  </data>
+  <data name="numericUpDown.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 20</value>
+  </data>
+  <data name="numericUpDown.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown.Name" xml:space="preserve">
+    <value>numericUpDown</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="numericUpDown_keyLength.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 48</value>
+  </data>
+  <data name="numericUpDown_keyLength.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 20</value>
+  </data>
+  <data name="numericUpDown_keyLength.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_keyLength.Name" xml:space="preserve">
+    <value>numericUpDown_keyLength</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_keyLength.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_keyLength.Parent" xml:space="preserve">
+    <value>groupBox_cards</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_keyLength.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="numericUpDown_quantity.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 74</value>
+  </data>
+  <data name="numericUpDown_quantity.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 20</value>
+  </data>
+  <data name="numericUpDown_quantity.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_quantity.Name" xml:space="preserve">
+    <value>numericUpDown_quantity</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_quantity.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_quantity.Parent" xml:space="preserve">
+    <value>groupBox_cards</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_quantity.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="groupBox_cards.Location" type="System.Drawing.Point, System.Drawing">
+    <value>35, 41</value>
+  </data>
+  <data name="groupBox_cards.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 100</value>
+  </data>
+  <data name="groupBox_cards.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="groupBox_cards.Text" xml:space="preserve">
+    <value>KARTY</value>
+  </data>
+  <data name="&gt;&gt;groupBox_cards.Name" xml:space="preserve">
+    <value>groupBox_cards</value>
+  </data>
+  <data name="&gt;&gt;groupBox_cards.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox_cards.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBox_cards.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
