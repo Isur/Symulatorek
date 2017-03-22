@@ -115,6 +115,7 @@
             // 
             resources.ApplyResources(this.textBox_resultFileSource, "textBox_resultFileSource");
             this.textBox_resultFileSource.Name = "textBox_resultFileSource";
+            this.textBox_resultFileSource.TextChanged += new System.EventHandler(this.textBox_resultFileSource_TextChanged);
             // 
             // label_resultFileSource
             // 

@@ -26,5 +26,10 @@ namespace Gerwazy
         {
 
         }
+
+        private void textBox_resultFileSource_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
