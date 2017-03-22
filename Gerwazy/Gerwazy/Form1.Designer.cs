@@ -28,34 +28,57 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.button_start = new System.Windows.Forms.Button();
+            this.label_decode = new System.Windows.Forms.Label();
+            this.checkBox_random = new System.Windows.Forms.CheckBox();
+            this.checkBox_periodicity = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // button_start
             // 
-            this.button_start.Location = new System.Drawing.Point(129, 104);
+            resources.ApplyResources(this.button_start, "button_start");
             this.button_start.Name = "button_start";
-            this.button_start.Size = new System.Drawing.Size(75, 23);
-            this.button_start.TabIndex = 0;
-            this.button_start.Text = "START";
             this.button_start.UseVisualStyleBackColor = true;
             this.button_start.Click += new System.EventHandler(this.button_start_Click);
             // 
+            // label_decode
+            // 
+            resources.ApplyResources(this.label_decode, "label_decode");
+            this.label_decode.Name = "label_decode";
+            // 
+            // checkBox_random
+            // 
+            resources.ApplyResources(this.checkBox_random, "checkBox_random");
+            this.checkBox_random.Name = "checkBox_random";
+            this.checkBox_random.UseVisualStyleBackColor = true;
+            // 
+            // checkBox_periodicity
+            // 
+            resources.ApplyResources(this.checkBox_periodicity, "checkBox_periodicity");
+            this.checkBox_periodicity.Name = "checkBox_periodicity";
+            this.checkBox_periodicity.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.checkBox_periodicity);
+            this.Controls.Add(this.checkBox_random);
+            this.Controls.Add(this.label_decode);
             this.Controls.Add(this.button_start);
             this.Name = "Form1";
-            this.Text = "Form1";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Button button_start;
+        private System.Windows.Forms.Label label_decode;
+        private System.Windows.Forms.CheckBox checkBox_random;
+        private System.Windows.Forms.CheckBox checkBox_periodicity;
     }
 }
 
