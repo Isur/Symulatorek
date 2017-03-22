@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Gerwazy.Properties
+namespace TestPrzedSARG04.Properties
 {
 
 
