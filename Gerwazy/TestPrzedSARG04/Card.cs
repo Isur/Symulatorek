@@ -6,15 +6,14 @@ using System.Threading.Tasks;
 
 namespace Gerwazy
 {
-    class Simulator
+    class Card
     {
-        protected Sender sender;
-        protected Receiver receiver;
-
-        //METHODS 
-        public Simulator()
+        public string id { get; protected set; }
+        
+        //METHODS
+        public Card(string id)
         {
-
+            this.id = id;
         }
     }
 }

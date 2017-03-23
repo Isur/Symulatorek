@@ -6,13 +6,16 @@ using System.Threading.Tasks;
 
 namespace Gerwazy
 {
-    class Simulator
+    class Receiver
     {
-        protected Sender sender;
-        protected Receiver receiver;
 
-        //METHODS 
-        public Simulator()
+        //METHODS
+        public Receiver()
+        {
+
+        }
+
+        public void Decode()
         {
 
         }

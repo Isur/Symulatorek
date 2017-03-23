@@ -13,10 +13,16 @@ namespace Gerwazy
 {
     public partial class Form1 : Form
     {
-     
+        Simulator simulator;
+
         public Form1()
         {
             InitializeComponent();
+
+            this.simulator = new Simulator();
+
+            Card card = new Card(Convert.ToString(13213, 2)); //to jest tylko do testów
+            textBox3.Text = card.id; 
         }
 
     }
