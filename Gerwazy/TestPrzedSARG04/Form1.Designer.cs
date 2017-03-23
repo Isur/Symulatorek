@@ -1,4 +1,4 @@
-﻿namespace TestPrzedSARG04
+﻿namespace Gerwazy
 {
     partial class Form1
     {

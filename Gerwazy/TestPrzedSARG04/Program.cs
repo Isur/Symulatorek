@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TestPrzedSARG04
+namespace Gerwazy
 {
     static class Program
     {

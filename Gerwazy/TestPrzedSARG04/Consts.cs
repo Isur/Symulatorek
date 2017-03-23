@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TestPrzedSARG04
+namespace Gerwazy
 {
     static class Consts
     {
