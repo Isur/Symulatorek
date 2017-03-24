@@ -6,16 +6,14 @@ using System.Threading.Tasks;
 
 namespace Gerwazy
 {
-    delegate void Decoder(int period, int i, int j);
-
     class Receiver
     {
         public int minIteration { get; protected set; }
         public int maxIteration { get; protected set; }
         public int avgIteration { get; protected set; }
-        protected int[] iteration;
-        protected int[] solved;
-        protected char[,] result;
+        //protected int[] iteration;
+        //protected int[] solved;
+        //protected char[,] result;
 
         //METHODS
         public Receiver()
@@ -27,15 +25,9 @@ namespace Gerwazy
 
         public void Decode(DataStream dataStream, string path, bool isPeriod, int period)
         {
-            this.iteration = new int[dataStream.card.Length];
-            this.solved = new int[dataStream.card.Length];
-            this.result = new char[dataStream.card.Length, dataStream.codedId.Length];
-
-            Decoder decoder;
-            if (isPeriod)
-                decoder = this.decodePeriod;
-            else
-                decoder = this.decodeRandom;
+            int[] iteration = new int[dataStream.card.Length];
+            int[] solved = new int[dataStream.card.Length];
+            char[] result = new char[dataStream.codedId.Length];
 
             using (Saver saver = new Saver(path))
             {
@@ -46,32 +38,23 @@ namespace Gerwazy
                     saver.Save(dataStream.complementedId[i]);
                     saver.Save("");
 
-                    this.iteration[i] = 0;
-                    this.solved[i] = 0;
+                    iteration[i] = 0;
+                    solved[i] = 0;
+
                     for(int j = 0; j<dataStream.codedId.Length; j++)
                     {
-                        result[i,j] = Consts.Result[0];
+                        result[j] = Consts.Result[0];
                     }
 
-                    while(this.solved[i] < dataStream.codedId.Length)
+                    while(solved[i] < dataStream.codedId.Length)
                     {
                         for(int j = 0; j<dataStream.codedId.Length; j++)
                         {
-                            decoder(period, i, j);
+                            solved[i]++;
                         }
                     }
                 }
             }
-        }
-
-        protected void decodeRandom(int period, int i, int j)
-        {
-            solved[i]++;
-        }
-
-        protected void decodePeriod(int period, int i, int j)
-        {
-            solved[i]++;
         }
     }
 }
