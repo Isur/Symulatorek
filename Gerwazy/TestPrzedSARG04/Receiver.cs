@@ -8,6 +8,9 @@ namespace Gerwazy
 {
     class Receiver
     {
+        public int minIteration { get; protected set; }
+        public int maxIteration { get; protected set; }
+        public int avgIteration { get; protected set; }
 
         //METHODS
         public Receiver()
@@ -15,9 +18,12 @@ namespace Gerwazy
 
         }
 
-        public void Decode()
+        public void Decode(DataStream dataStream, string path)
         {
+            using (Saver saver = new Saver(path))
+            {
 
+            }
         }
     }
 }

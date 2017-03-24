@@ -19,8 +19,6 @@ namespace Gerwazy
         {
             InitializeComponent();
 
-            this.simulator = new Simulator();
-
             Card card = new Card(Convert.ToString(13213, 2)); //to jest tylko do testów
 
             numericUpDown_periodicitiDecode.Enabled = false;
@@ -88,7 +86,9 @@ namespace Gerwazy
             progressBar_decode.Visible = true;
             progressBar_decode.Maximum = (int) numericUpDown_keyQuantity.Value;
             everything(false);
-            // TU ROBOTA DLA CIEBIExD!  // FUNKCJA KTORA MA DZIALAC
+
+            this.simulator = new Simulator((int)this.numericUpDown_keyQuantity.Value, (int)this.numericUpDown_keyLength.Value, this.textBox_resultFileSource.Text);// TU ROBOTA DLA CIEBIExD!  // FUNKCJA KTORA MA DZIALAC
+            
             everything(true);
 
         }

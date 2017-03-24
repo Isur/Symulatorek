@@ -12,9 +12,12 @@ namespace Gerwazy
         protected Receiver receiver;
 
         //METHODS 
-        public Simulator()
+        public Simulator(int cardsAmount, int idLenght, string path)
         {
+            this.sender = new Sender(cardsAmount, idLenght);
+            this.receiver = new Receiver();
 
+            this.receiver.Decode(this.sender.SendDataStream(), path);
         }
     }
 }
