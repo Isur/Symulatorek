@@ -26,6 +26,7 @@ namespace Gerwazy
             numericUpDown_periodicitiDecode.Enabled = false;
             button_start.Enabled = false;
             progressBar_decode.Visible = false;
+            checkBox_randomDecode.Checked = true;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -40,12 +41,12 @@ namespace Gerwazy
 
         private void textBox_resultFileSource_TextChanged(object sender, EventArgs e)
         {
-          
+
         }
 
         private void saveFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
-            
+
         }
 
         private void textBox_resultFileSource_Click(object sender, EventArgs e)
@@ -70,11 +71,38 @@ namespace Gerwazy
 
         }
 
+        private void everything(bool xD)
+        {
+            numericUpDown_keyLength.Enabled = xD;
+            numericUpDown_keyQuantity.Enabled = xD;
+            numericUpDown_periodicitiDecode.Enabled = xD;
+            checkBox_periodicityDecode.Enabled = xD;
+            checkBox_randomDecode.Enabled = xD;
+            button_start.Enabled = xD;
+            button_resultFileSource.Enabled = xD;
+            textBox_resultFileSource.Enabled = xD;
+        }
+
         private void button_start_Click(object sender, EventArgs e)
         {
             progressBar_decode.Visible = true;
             progressBar_decode.Maximum = (int) numericUpDown_keyQuantity.Value;
-            progressBar_decode.Increment(1);
+            everything(false);
+            // TU ROBOTA DLA CIEBIExD!  // FUNKCJA KTORA MA DZIALAC
+            everything(true);
+
+        }
+
+        private void checkBox_periodicityDecode_CheckedChanged(object sender, EventArgs e)
+        {
+            if(checkBox_periodicityDecode.Checked == true)
+            {
+                numericUpDown_periodicitiDecode.Enabled = true;
+            }
+            else
+            {
+                numericUpDown_periodicitiDecode.Enabled = false;
+            }
         }
     }
 }

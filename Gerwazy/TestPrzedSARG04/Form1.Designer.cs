@@ -179,6 +179,7 @@
             this.checkBox_periodicityDecode.TabIndex = 1;
             this.checkBox_periodicityDecode.Text = "Okres";
             this.checkBox_periodicityDecode.UseVisualStyleBackColor = true;
+            this.checkBox_periodicityDecode.CheckedChanged += new System.EventHandler(this.checkBox_periodicityDecode_CheckedChanged);
             // 
             // checkBox_randomDecode
             // 
