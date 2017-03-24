@@ -17,6 +17,18 @@ namespace Gerwazy
             this.writer = new StreamWriter(path);
         }
 
+        public void Save(string data)
+        {
+            string spacedData = "";
+
+            for(int i = 0; i<data.Length; i++)
+            {
+                spacedData += data[i] + " ";
+            }
+
+            this.writer.WriteLine(spacedData);
+        }
+
         public void Dispose()
         {
             this.writer.Close();

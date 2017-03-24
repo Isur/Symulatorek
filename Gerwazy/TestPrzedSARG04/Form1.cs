@@ -87,7 +87,7 @@ namespace Gerwazy
             progressBar_decode.Maximum = (int) numericUpDown_keyQuantity.Value;
             everything(false);
 
-            this.simulator = new Simulator((int)this.numericUpDown_keyQuantity.Value, (int)this.numericUpDown_keyLength.Value, this.textBox_resultFileSource.Text);// TU ROBOTA DLA CIEBIExD!  // FUNKCJA KTORA MA DZIALAC
+            this.simulator = new Simulator((int)this.numericUpDown_keyQuantity.Value, (int)this.numericUpDown_keyLength.Value, this.textBox_resultFileSource.Text, this.checkBox_periodicityDecode.Checked, (int)this.numericUpDown_periodicitiDecode.Value);// TU ROBOTA DLA CIEBIExD!  // FUNKCJA KTORA MA DZIALAC
             
             everything(true);
 

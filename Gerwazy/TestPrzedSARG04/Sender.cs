@@ -34,7 +34,6 @@ namespace Gerwazy
             {
                 this.card[i] = new Card(Convert.ToString(current, 2));
                 current += increment;
-                MessageBox.Show(card[i].id);
             }
         }
     }
