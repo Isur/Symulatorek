@@ -104,5 +104,16 @@ namespace Gerwazy
                 numericUpDown_periodicitiDecode.Enabled = false;
             }
         }
+
+        private void numericUpDown_keyQuantity_ValueChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void numericUpDown_keyLength_ValueChanged(object sender, EventArgs e)
+        {
+            numericUpDown_keyQuantity.Maximum = (long)Math.Pow(2, ((long)numericUpDown_keyLength.Value - 1));
+           
+        }
     }
 }

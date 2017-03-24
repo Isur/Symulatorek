@@ -116,6 +116,7 @@
             0,
             0,
             0});
+            this.numericUpDown_keyQuantity.ValueChanged += new System.EventHandler(this.numericUpDown_keyQuantity_ValueChanged);
             // 
             // numericUpDown_keyLength
             // 
@@ -138,6 +139,7 @@
             0,
             0,
             0});
+            this.numericUpDown_keyLength.ValueChanged += new System.EventHandler(this.numericUpDown_keyLength_ValueChanged);
             // 
             // groupBox_decode
             // 
@@ -316,7 +318,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(624, 442);
+            this.ClientSize = new System.Drawing.Size(624, 441);
             this.Controls.Add(this.progressBar_decode);
             this.Controls.Add(this.label_resultFileSource);
             this.Controls.Add(this.button_resultFileSource);
