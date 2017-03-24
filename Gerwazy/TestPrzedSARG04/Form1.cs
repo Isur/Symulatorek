@@ -22,8 +22,59 @@ namespace Gerwazy
             this.simulator = new Simulator();
 
             Card card = new Card(Convert.ToString(13213, 2)); //to jest tylko do testów
-            textBox3.Text = card.id; 
+
+            numericUpDown_periodicitiDecode.Enabled = false;
+            button_start.Enabled = false;
+            progressBar_decode.Visible = false;
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void numericUpDown_periodicitiDecode_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_resultFileSource_TextChanged(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void saveFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+            
+        }
+
+        private void textBox_resultFileSource_Click(object sender, EventArgs e)
+        {
+            resultFileSource();
+        }
+
+        private void button_resultFileSource_Click(object sender, EventArgs e)
+        {
+            resultFileSource();
+        }
+
+        private void resultFileSource()
+        {
+            saveFileDialog1.ShowDialog();
+            textBox_resultFileSource.Text = saveFileDialog1.FileName;
+            button_start.Enabled = true;
+        }
+
+        private void groupBox_shortResults_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_start_Click(object sender, EventArgs e)
+        {
+            progressBar_decode.Visible = true;
+            progressBar_decode.Maximum = (int) numericUpDown_keyQuantity.Value;
+            progressBar_decode.Increment(1);
+        }
     }
 }
