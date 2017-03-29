@@ -58,10 +58,6 @@
             this.groupBox_shortResults.SuspendLayout();
             this.SuspendLayout();
             // 
-            // saveFileDialog1
-            // 
-            this.saveFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.saveFileDialog1_FileOk);
-            // 
             // groupBox_cards
             // 
             this.groupBox_cards.Controls.Add(this.label_keyQuantity);
@@ -116,7 +112,6 @@
             0,
             0,
             0});
-            this.numericUpDown_keyQuantity.ValueChanged += new System.EventHandler(this.numericUpDown_keyQuantity_ValueChanged);
             // 
             // numericUpDown_keyLength
             // 
@@ -169,7 +164,6 @@
             0,
             0,
             0});
-            this.numericUpDown_periodicitiDecode.ValueChanged += new System.EventHandler(this.numericUpDown_periodicitiDecode_ValueChanged);
             // 
             // checkBox_periodicityDecode
             // 
@@ -284,7 +278,6 @@
             this.textBox_resultFileSource.Size = new System.Drawing.Size(135, 20);
             this.textBox_resultFileSource.TabIndex = 4;
             this.textBox_resultFileSource.Click += new System.EventHandler(this.textBox_resultFileSource_Click);
-            this.textBox_resultFileSource.TextChanged += new System.EventHandler(this.textBox_resultFileSource_TextChanged);
             // 
             // button_resultFileSource
             // 
@@ -318,7 +311,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(624, 441);
+            this.ClientSize = new System.Drawing.Size(624, 442);
             this.Controls.Add(this.progressBar_decode);
             this.Controls.Add(this.label_resultFileSource);
             this.Controls.Add(this.button_resultFileSource);
@@ -333,7 +326,6 @@
             this.MinimumSize = new System.Drawing.Size(640, 480);
             this.Name = "Form1";
             this.Text = "Klucznik Gerwazy";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox_cards.ResumeLayout(false);
             this.groupBox_cards.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_keyQuantity)).EndInit();

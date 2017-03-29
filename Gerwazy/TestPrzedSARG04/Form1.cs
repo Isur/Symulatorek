@@ -27,26 +27,6 @@ namespace Gerwazy
             checkBox_randomDecode.Checked = true;
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void numericUpDown_periodicitiDecode_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox_resultFileSource_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void saveFileDialog1_FileOk(object sender, CancelEventArgs e)
-        {
-
-        }
-
         private void textBox_resultFileSource_Click(object sender, EventArgs e)
         {
             resultFileSource();
@@ -87,8 +67,13 @@ namespace Gerwazy
             progressBar_decode.Maximum = (int) numericUpDown_keyQuantity.Value;
             everything(false);
 
-            this.simulator = new Simulator((int)this.numericUpDown_keyQuantity.Value, (int)this.numericUpDown_keyLength.Value, this.textBox_resultFileSource.Text, this.checkBox_periodicityDecode.Checked, (int)this.numericUpDown_periodicitiDecode.Value);// TU ROBOTA DLA CIEBIExD!  // FUNKCJA KTORA MA DZIALAC
-            
+            this.simulator = new Simulator((int)this.numericUpDown_keyQuantity.Value, (int)this.numericUpDown_keyLength.Value, 
+                                            this.textBox_resultFileSource.Text, this.checkBox_periodicityDecode.Checked, 
+                                            (int)this.numericUpDown_periodicitiDecode.Value, this.progressBar_decode);// TU ROBOTA DLA CIEBIExD!  // FUNKCJA KTORA MA DZIALAC
+            this.label_minIt.Text = this.simulator.GetMinIteration().ToString();
+            this.label_maxIt.Text = this.simulator.GetMaxIteration().ToString();
+            this.label_averageIt.Text = this.simulator.GetAvgIteration().ToString();
+
             everything(true);
 
         }
@@ -103,11 +88,6 @@ namespace Gerwazy
             {
                 numericUpDown_periodicitiDecode.Enabled = false;
             }
-        }
-
-        private void numericUpDown_keyQuantity_ValueChanged(object sender, EventArgs e)
-        {
-            
         }
 
         private void numericUpDown_keyLength_ValueChanged(object sender, EventArgs e)

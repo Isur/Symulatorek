@@ -21,7 +21,9 @@ namespace Gerwazy
             this.complementedId = new string[this.card.Length];
             this.codeAndCompliment();
         }
-
+        /// <summary>
+        /// Codes and compliments ID of every card
+        /// </summary>
         protected void codeAndCompliment()
         {
             Random random = new Random();

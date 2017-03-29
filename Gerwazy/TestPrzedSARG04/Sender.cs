@@ -17,12 +17,19 @@ namespace Gerwazy
             this.card = new Card[cardsAmount];
             this.setCards(cardsAmount, idLength);
         }
-
+        /// <summary>
+        /// Used to pass data about cards as a one argument to Receiver
+        /// </summary>
+        /// <returns></returns>
         public DataStream SendDataStream()
         {
             return new DataStream(this.card);
         }
-
+        /// <summary>
+        /// Set every card with a unique ID
+        /// </summary>
+        /// <param name="cardsAmount"></param>
+        /// <param name="idLength"></param>
         protected void setCards(int cardsAmount, int idLength)
         {
             long min = Consts.Power(2, idLength-1);

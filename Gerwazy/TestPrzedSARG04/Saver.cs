@@ -21,7 +21,7 @@ namespace Gerwazy
         {
             string spacedData = "";
 
-            for(int i = 0; i<data.Length; i++)
+            for(int i = 0; i<data.Length; i++) //makes space after every char
             {
                 spacedData += data[i] + " ";
             }
