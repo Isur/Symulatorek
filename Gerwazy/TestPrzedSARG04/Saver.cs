@@ -16,19 +16,29 @@ namespace Gerwazy
         {
             this.writer = new StreamWriter(path);
         }
-
-        public void Save(string data)
+        /// <summary>
+        /// Saves data with space between every char
+        /// </summary>
+        /// <param name="data"></param>
+        public void SaveData(string data)
         {
             string spacedData = "";
 
-            for(int i = 0; i<data.Length; i++) //makes space after every char
+            for(int i = 0; i<data.Length; i++)
             {
                 spacedData += data[i] + " ";
             }
 
             this.writer.WriteLine(spacedData);
         }
-
+        /// <summary>
+        /// Saves raw data without any formating
+        /// </summary>
+        /// <param name="data"></param>
+        public void Save(string data)
+        {
+            this.writer.WriteLine(data);
+        }
         public void Dispose()
         {
             this.writer.Close();

@@ -38,10 +38,10 @@ namespace Gerwazy
                 {
                     iteration[i] = 0;
 
-                    saver.Save(dataStream.card[i].id);
-                    saver.Save(dataStream.codedId[i]);
-                    saver.Save(dataStream.complementedId[i]);
-                    saver.Save("");
+                    saver.SaveData(dataStream.card[i].id);
+                    saver.SaveData(dataStream.codedId[i]);
+                    saver.SaveData(dataStream.complementedId[i]);
+                    saver.SaveData("");
 
                     iteration[i] = 0;
                     solved[i] = 0;
@@ -104,10 +104,10 @@ namespace Gerwazy
                                 bases += " ";
                             }
                         }
-                        saver.Save(bases);
-                        saver.Save(resultPolarizations);
+                        saver.SaveData(bases);
+                        saver.SaveData(resultPolarizations);
                     }
-                    saver.Save("\n\n\n");
+                    saver.SaveData("\n\n\n");
                     progressBar.Value++;
 
                     this.minIteration = this.minIteration < iteration[i] ? this.minIteration : iteration[i];
@@ -115,6 +115,12 @@ namespace Gerwazy
                     this.avgIteration += iteration[i];
                 }
                 this.avgIteration /= dataStream.card.Length;
+
+                saver.Save("Długość ID: " + dataStream.codedId[0].Length);
+                saver.Save("Ilość ID: " + dataStream.codedId.Length);
+                saver.Save("Minimalna ilość iteracji: " + this.minIteration.ToString());
+                saver.Save("Maksymalna ilość iteracji: " + this.maxIteration.ToString());
+                saver.Save("Średnia ilość iteracji: " + this.avgIteration.ToString());
             }
         }
     }

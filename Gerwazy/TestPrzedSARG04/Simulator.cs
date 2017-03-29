@@ -20,17 +20,14 @@ namespace Gerwazy
 
             this.receiver.Decode(this.sender.SendDataStream(), path, isPeriod, period, progressBar);
         }
-
         public int GetMinIteration()
         {
             return this.receiver.minIteration;
         }
-
         public int GetMaxIteration()
         {
             return this.receiver.maxIteration;
         }
-
         public double GetAvgIteration()
         {
             return this.receiver.avgIteration;
