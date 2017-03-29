@@ -32,5 +32,9 @@ namespace Gerwazy
         {
             return this.receiver.avgIteration;
         }
+        public string GetTimer()
+        {
+            return this.receiver.timer;
+        }
     }
 }

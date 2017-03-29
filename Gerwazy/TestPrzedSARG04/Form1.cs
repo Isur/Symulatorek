@@ -43,12 +43,7 @@ namespace Gerwazy
             textBox_resultFileSource.Text = saveFileDialog1.FileName;
             button_start.Enabled = true;
         }
-
-        private void groupBox_shortResults_Enter(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void everything(bool xD)
         {
             numericUpDown_keyLength.Enabled = xD;
@@ -73,6 +68,7 @@ namespace Gerwazy
             this.label_minIt.Text = this.simulator.GetMinIteration().ToString();
             this.label_maxIt.Text = this.simulator.GetMaxIteration().ToString();
             this.label_averageIt.Text = this.simulator.GetAvgIteration().ToString();
+            this.label_timer.Text = this.simulator.GetTimer().ToString();
 
             everything(true);
 

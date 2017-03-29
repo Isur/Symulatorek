@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,7 @@ namespace Gerwazy
         public int minIteration { get; protected set; }
         public int maxIteration { get; protected set; }
         public double avgIteration { get; protected set; }
+        public string timer { get; protected set; }
 
         //METHODS
         public Receiver()
@@ -19,6 +21,7 @@ namespace Gerwazy
             this.minIteration = 10000;
             this.maxIteration = 0;
             this.avgIteration = 0;
+            this.timer = "00:00.00";
         }
 
         public void Decode(DataStream dataStream, string path, bool isPeriod, int period, ProgressBar progressBar)
@@ -34,6 +37,8 @@ namespace Gerwazy
 
             using (Saver saver = new Saver(path))
             {
+                Stopwatch stopwatch = new Stopwatch();
+                stopwatch.Start();
                 for (int i = 0; i < dataStream.card.Length; i++)
                 {
                     iteration[i] = 0;
@@ -116,6 +121,9 @@ namespace Gerwazy
                 }
                 this.avgIteration /= dataStream.card.Length;
                 this.avgIteration = Math.Round(this.avgIteration, 2);
+                stopwatch.Stop();
+                this.timer = stopwatch.Elapsed.ToString("mm\\:ss\\.ff");
+                saver.Save("Czas wykonania: " + this.timer);
                 saver.Save("Długość ID: " + dataStream.codedId[0].Length);
                 saver.Save("Ilość ID: " + dataStream.codedId.Length);
                 saver.Save("Minimalna ilość iteracji: " + this.minIteration.ToString());

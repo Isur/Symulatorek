@@ -39,6 +39,8 @@
             this.checkBox_periodicityDecode = new System.Windows.Forms.CheckBox();
             this.checkBox_randomDecode = new System.Windows.Forms.CheckBox();
             this.groupBox_shortResults = new System.Windows.Forms.GroupBox();
+            this.label_timer = new System.Windows.Forms.Label();
+            this.label_executionTime = new System.Windows.Forms.Label();
             this.label_averageIt = new System.Windows.Forms.Label();
             this.label_maxIt = new System.Windows.Forms.Label();
             this.label_minIt = new System.Windows.Forms.Label();
@@ -190,6 +192,8 @@
             // 
             // groupBox_shortResults
             // 
+            this.groupBox_shortResults.Controls.Add(this.label_timer);
+            this.groupBox_shortResults.Controls.Add(this.label_executionTime);
             this.groupBox_shortResults.Controls.Add(this.label_averageIt);
             this.groupBox_shortResults.Controls.Add(this.label_maxIt);
             this.groupBox_shortResults.Controls.Add(this.label_minIt);
@@ -203,7 +207,24 @@
             this.groupBox_shortResults.TabIndex = 2;
             this.groupBox_shortResults.TabStop = false;
             this.groupBox_shortResults.Text = "Skrócone wyniki";
-            this.groupBox_shortResults.Enter += new System.EventHandler(this.groupBox_shortResults_Enter);
+            
+            // 
+            // label_timer
+            // 
+            this.label_timer.AutoSize = true;
+            this.label_timer.Location = new System.Drawing.Point(120, 80);
+            this.label_timer.Name = "label_timer";
+            this.label_timer.Size = new System.Drawing.Size(0, 13);
+            this.label_timer.TabIndex = 7;
+            // 
+            // label_executionTime
+            // 
+            this.label_executionTime.AutoSize = true;
+            this.label_executionTime.Location = new System.Drawing.Point(20, 80);
+            this.label_executionTime.Name = "label_executionTime";
+            this.label_executionTime.Size = new System.Drawing.Size(90, 13);
+            this.label_executionTime.TabIndex = 6;
+            this.label_executionTime.Text = "Czas wykonania: ";
             // 
             // label_averageIt
             // 
@@ -360,6 +381,8 @@
         private System.Windows.Forms.Button button_resultFileSource;
         private System.Windows.Forms.Label label_resultFileSource;
         private System.Windows.Forms.ProgressBar progressBar_decode;
+        private System.Windows.Forms.Label label_timer;
+        private System.Windows.Forms.Label label_executionTime;
     }
 }
 
