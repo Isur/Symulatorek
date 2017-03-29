@@ -39,6 +39,7 @@ namespace Gerwazy
             {
                 Stopwatch stopwatch = new Stopwatch();
                 stopwatch.Start();
+
                 for (int i = 0; i < dataStream.card.Length; i++)
                 {
                     iteration[i] = 0;
@@ -121,14 +122,16 @@ namespace Gerwazy
                 }
                 this.avgIteration /= dataStream.card.Length;
                 this.avgIteration = Math.Round(this.avgIteration, 2);
+
                 stopwatch.Stop();
                 this.timer = stopwatch.Elapsed.ToString("mm\\:ss\\.ff");
-                saver.Save("Czas wykonania: " + this.timer);
+
                 saver.Save("Długość ID: " + dataStream.codedId[0].Length);
                 saver.Save("Ilość ID: " + dataStream.codedId.Length);
                 saver.Save("Minimalna ilość iteracji: " + this.minIteration.ToString());
                 saver.Save("Maksymalna ilość iteracji: " + this.maxIteration.ToString());
                 saver.Save("Średnia ilość iteracji: " + this.avgIteration.ToString());
+                saver.Save("Całkowity czas obliczeń(mm:ss.ff): " + this.timer);
             }
         }
     }
