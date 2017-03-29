@@ -115,7 +115,7 @@ namespace Gerwazy
                     this.avgIteration += iteration[i];
                 }
                 this.avgIteration /= dataStream.card.Length;
-
+                this.avgIteration = Math.Round(this.avgIteration, 2);
                 saver.Save("Długość ID: " + dataStream.codedId[0].Length);
                 saver.Save("Ilość ID: " + dataStream.codedId.Length);
                 saver.Save("Minimalna ilość iteracji: " + this.minIteration.ToString());

@@ -64,7 +64,7 @@
             this.groupBox_cards.Controls.Add(this.label_keyLength);
             this.groupBox_cards.Controls.Add(this.numericUpDown_keyQuantity);
             this.groupBox_cards.Controls.Add(this.numericUpDown_keyLength);
-            this.groupBox_cards.Location = new System.Drawing.Point(30, 30);
+            this.groupBox_cards.Location = new System.Drawing.Point(12, 12);
             this.groupBox_cards.Name = "groupBox_cards";
             this.groupBox_cards.Size = new System.Drawing.Size(271, 100);
             this.groupBox_cards.TabIndex = 0;
@@ -141,7 +141,7 @@
             this.groupBox_decode.Controls.Add(this.numericUpDown_periodicitiDecode);
             this.groupBox_decode.Controls.Add(this.checkBox_periodicityDecode);
             this.groupBox_decode.Controls.Add(this.checkBox_randomDecode);
-            this.groupBox_decode.Location = new System.Drawing.Point(350, 30);
+            this.groupBox_decode.Location = new System.Drawing.Point(289, 12);
             this.groupBox_decode.Name = "groupBox_decode";
             this.groupBox_decode.Size = new System.Drawing.Size(235, 100);
             this.groupBox_decode.TabIndex = 1;
@@ -197,7 +197,7 @@
             this.groupBox_shortResults.Controls.Add(this.label_maxItQuantity);
             this.groupBox_shortResults.Controls.Add(this.label_minItQuantity);
             this.groupBox_shortResults.ForeColor = System.Drawing.Color.Black;
-            this.groupBox_shortResults.Location = new System.Drawing.Point(30, 250);
+            this.groupBox_shortResults.Location = new System.Drawing.Point(15, 164);
             this.groupBox_shortResults.Name = "groupBox_shortResults";
             this.groupBox_shortResults.Size = new System.Drawing.Size(200, 100);
             this.groupBox_shortResults.TabIndex = 2;
@@ -210,27 +210,24 @@
             this.label_averageIt.AutoSize = true;
             this.label_averageIt.Location = new System.Drawing.Point(120, 60);
             this.label_averageIt.Name = "label_averageIt";
-            this.label_averageIt.Size = new System.Drawing.Size(35, 13);
+            this.label_averageIt.Size = new System.Drawing.Size(0, 13);
             this.label_averageIt.TabIndex = 5;
-            this.label_averageIt.Text = "label6";
             // 
             // label_maxIt
             // 
             this.label_maxIt.AutoSize = true;
             this.label_maxIt.Location = new System.Drawing.Point(120, 40);
             this.label_maxIt.Name = "label_maxIt";
-            this.label_maxIt.Size = new System.Drawing.Size(35, 13);
+            this.label_maxIt.Size = new System.Drawing.Size(0, 13);
             this.label_maxIt.TabIndex = 4;
-            this.label_maxIt.Text = "label5";
             // 
             // label_minIt
             // 
             this.label_minIt.AutoSize = true;
             this.label_minIt.Location = new System.Drawing.Point(120, 20);
             this.label_minIt.Name = "label_minIt";
-            this.label_minIt.Size = new System.Drawing.Size(35, 13);
+            this.label_minIt.Size = new System.Drawing.Size(0, 13);
             this.label_minIt.TabIndex = 3;
-            this.label_minIt.Text = "label4";
             // 
             // label_averageItQuantity
             // 
@@ -263,7 +260,7 @@
             // button_start
             // 
             this.button_start.ForeColor = System.Drawing.Color.Black;
-            this.button_start.Location = new System.Drawing.Point(350, 250);
+            this.button_start.Location = new System.Drawing.Point(289, 164);
             this.button_start.Name = "button_start";
             this.button_start.Size = new System.Drawing.Size(235, 100);
             this.button_start.TabIndex = 3;
@@ -273,16 +270,16 @@
             // 
             // textBox_resultFileSource
             // 
-            this.textBox_resultFileSource.Location = new System.Drawing.Point(30, 200);
+            this.textBox_resultFileSource.Location = new System.Drawing.Point(12, 131);
             this.textBox_resultFileSource.Name = "textBox_resultFileSource";
-            this.textBox_resultFileSource.Size = new System.Drawing.Size(135, 20);
+            this.textBox_resultFileSource.Size = new System.Drawing.Size(190, 20);
             this.textBox_resultFileSource.TabIndex = 4;
             this.textBox_resultFileSource.Click += new System.EventHandler(this.textBox_resultFileSource_Click);
             // 
             // button_resultFileSource
             // 
             this.button_resultFileSource.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button_resultFileSource.Location = new System.Drawing.Point(180, 200);
+            this.button_resultFileSource.Location = new System.Drawing.Point(208, 131);
             this.button_resultFileSource.Name = "button_resultFileSource";
             this.button_resultFileSource.Size = new System.Drawing.Size(75, 20);
             this.button_resultFileSource.TabIndex = 5;
@@ -294,7 +291,7 @@
             // 
             this.label_resultFileSource.AutoSize = true;
             this.label_resultFileSource.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label_resultFileSource.Location = new System.Drawing.Point(30, 180);
+            this.label_resultFileSource.Location = new System.Drawing.Point(12, 115);
             this.label_resultFileSource.Name = "label_resultFileSource";
             this.label_resultFileSource.Size = new System.Drawing.Size(135, 13);
             this.label_resultFileSource.TabIndex = 6;
@@ -302,7 +299,7 @@
             // 
             // progressBar_decode
             // 
-            this.progressBar_decode.Location = new System.Drawing.Point(350, 180);
+            this.progressBar_decode.Location = new System.Drawing.Point(289, 118);
             this.progressBar_decode.Name = "progressBar_decode";
             this.progressBar_decode.Size = new System.Drawing.Size(235, 40);
             this.progressBar_decode.TabIndex = 7;
@@ -311,7 +308,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(624, 442);
+            this.ClientSize = new System.Drawing.Size(534, 276);
             this.Controls.Add(this.progressBar_decode);
             this.Controls.Add(this.label_resultFileSource);
             this.Controls.Add(this.button_resultFileSource);
@@ -322,8 +319,8 @@
             this.Controls.Add(this.groupBox_cards);
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MaximumSize = new System.Drawing.Size(640, 480);
-            this.MinimumSize = new System.Drawing.Size(640, 480);
+            this.MaximumSize = new System.Drawing.Size(550, 315);
+            this.MinimumSize = new System.Drawing.Size(550, 315);
             this.Name = "Form1";
             this.Text = "Klucznik Gerwazy";
             this.groupBox_cards.ResumeLayout(false);
