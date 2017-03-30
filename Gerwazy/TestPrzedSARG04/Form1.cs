@@ -21,10 +21,11 @@ namespace Gerwazy
 
             Card card = new Card(Convert.ToString(13213, 2)); //to jest tylko do testów
 
-            numericUpDown_periodicitiDecode.Enabled = false;
             button_start.Enabled = false;
             progressBar_decode.Visible = false;
             checkBox_randomDecode.Checked = true;
+            checkBox_periodicityDecode.Checked = false;
+            numericUpDown_periodicitiDecode.Enabled = false;
         }
 
         private void textBox_resultFileSource_Click(object sender, EventArgs e)
@@ -39,9 +40,18 @@ namespace Gerwazy
 
         private void resultFileSource()
         {
+            saveFileDialog1.Filter = "Text|*.txt|All|*.*";
             saveFileDialog1.ShowDialog();
             textBox_resultFileSource.Text = saveFileDialog1.FileName;
-            button_start.Enabled = true;
+            if (textBox_resultFileSource.Text.Substring(textBox_resultFileSource.TextLength - 4) != ".txt")
+            {
+                button_start.Enabled = false;
+                MessageBox.Show("Wymagany plik o rozszerzeniu .txt", "Błąd!", MessageBoxButtons.OK);
+            }
+            else
+            {
+                button_start.Enabled = true;
+            }            
         }
         
         private void everything(bool xD)
@@ -71,7 +81,8 @@ namespace Gerwazy
             this.label_timer.Text = this.simulator.GetTimer().ToString();
 
             everything(true);
-
+            checkBox_periodicityDecode.Checked = false;
+            numericUpDown_periodicitiDecode.Enabled = false;
         }
 
         private void checkBox_periodicityDecode_CheckedChanged(object sender, EventArgs e)
@@ -84,12 +95,25 @@ namespace Gerwazy
             {
                 numericUpDown_periodicitiDecode.Enabled = false;
             }
+            if (checkBox_periodicityDecode.Checked == true) checkBox_randomDecode.Checked = false;
+            else checkBox_randomDecode.Checked = true;
         }
 
         private void numericUpDown_keyLength_ValueChanged(object sender, EventArgs e)
         {
             numericUpDown_keyQuantity.Maximum = (long)Math.Pow(2, ((long)numericUpDown_keyLength.Value - 1));
            
+        }
+
+        private void checkBox_randomDecode_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox_randomDecode.Checked == true) checkBox_periodicityDecode.Checked = false;
+            else checkBox_periodicityDecode.Checked = true;
+        }
+
+        private void textBox_resultFileSource_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

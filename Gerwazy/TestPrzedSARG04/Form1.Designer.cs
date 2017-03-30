@@ -189,6 +189,7 @@
             this.checkBox_randomDecode.TabIndex = 0;
             this.checkBox_randomDecode.Text = "Losowe";
             this.checkBox_randomDecode.UseVisualStyleBackColor = true;
+            this.checkBox_randomDecode.CheckedChanged += new System.EventHandler(this.checkBox_randomDecode_CheckedChanged);
             // 
             // groupBox_shortResults
             // 
@@ -207,7 +208,6 @@
             this.groupBox_shortResults.TabIndex = 2;
             this.groupBox_shortResults.TabStop = false;
             this.groupBox_shortResults.Text = "Skrócone wyniki";
-            
             // 
             // label_timer
             // 
@@ -296,6 +296,7 @@
             this.textBox_resultFileSource.Size = new System.Drawing.Size(190, 20);
             this.textBox_resultFileSource.TabIndex = 4;
             this.textBox_resultFileSource.Click += new System.EventHandler(this.textBox_resultFileSource_Click);
+            this.textBox_resultFileSource.TextChanged += new System.EventHandler(this.textBox_resultFileSource_TextChanged);
             // 
             // button_resultFileSource
             // 
@@ -314,9 +315,9 @@
             this.label_resultFileSource.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label_resultFileSource.Location = new System.Drawing.Point(12, 115);
             this.label_resultFileSource.Name = "label_resultFileSource";
-            this.label_resultFileSource.Size = new System.Drawing.Size(135, 13);
+            this.label_resultFileSource.Size = new System.Drawing.Size(270, 13);
             this.label_resultFileSource.TabIndex = 6;
-            this.label_resultFileSource.Text = "Ścieżka pliku wynikowego:";
+            this.label_resultFileSource.Text = "Ścieżka pliku wynikowego: Wymagane rozszerzenie .txt";
             // 
             // progressBar_decode
             // 
