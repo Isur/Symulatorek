@@ -55,8 +55,8 @@ namespace Gerwazy
         private void everything(bool xD)
         {
             numericUpDown_keyLength.Enabled = xD;
-            numericUpDown_keyQuantity.Enabled = xD;
-            numericUpDown_periodicitiDecode.Enabled = xD;
+            //numericUpDown_keyQuantity.Enabled = xD;
+            //numericUpDown_periodicitiDecode.Enabled = xD;
             checkBox_periodicityDecode.Enabled = xD;
             checkBox_randomDecode.Enabled = xD;
             button_start.Enabled = xD;
@@ -71,8 +71,9 @@ namespace Gerwazy
             everything(false);
 
             this.simulator = new Simulator((int)this.numericUpDown_keyQuantity.Value, (int)this.numericUpDown_keyLength.Value, 
-                                            this.textBox_resultFileSource.Text, this.checkBox_periodicityDecode.Checked, 
-                                            (int)this.numericUpDown_periodicitiDecode.Value, this.progressBar_decode);
+                                            this.checkBox_periodicityDecode.Checked, (int)this.numericUpDown_periodicitiDecode.Value,
+                                            this.checkBox_oneKey.Checked, (int)this.numericUpDown_oneKey.Value,
+                                            this.textBox_resultFileSource.Text, this.progressBar_decode);
 
             this.label_minIt.Text = this.simulator.GetMinIteration().ToString();
             this.label_maxIt.Text = this.simulator.GetMaxIteration().ToString();
@@ -100,7 +101,7 @@ namespace Gerwazy
             if(checkBox_randomDecode.Checked == true)
             {
                 checkBox_periodicityDecode.Checked = false;
-                //  checkBox_oneKey.Checked = false;  
+                //checkBox_oneKey.Checked = false;  
                 numericUpDown_periodicitiDecode.Enabled = false;
             }
             readyToStart();
@@ -111,7 +112,7 @@ namespace Gerwazy
             if(checkBox_periodicityDecode.Checked == true)
             {
                 checkBox_randomDecode.Checked = false;
-                // checkBox_oneKey.Checked = false;
+                //checkBox_oneKey.Checked = false;
                 numericUpDown_periodicitiDecode.Enabled = true;
             }
             readyToStart();

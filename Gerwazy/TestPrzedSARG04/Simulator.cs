@@ -13,17 +13,23 @@ namespace Gerwazy
         protected Receiver receiver;
 
         //METHODS 
-        public Simulator(int cardsAmount, int idLenght, string path, bool isPeriod, int period ,/*bool isRepeatable, int repeats,*/ ProgressBar progressBar)
+        public Simulator(int cardsAmount, int idLenght, bool isPeriod, int period ,bool isRepeatable, int repeats, string path, ProgressBar progressBar)
         {
-            this.sender = new Sender(cardsAmount, idLenght);
             this.receiver = new Receiver(path);
 
-            //if(isRepeatable)
-
-            if (isPeriod)
-                this.receiver.DecodPeriodically(this.sender.SendDataStream(), progressBar, period);
+            if (isRepeatable)
+            {
+                this.sender = new Sender(idLenght);
+                this.receiver.DecodeRepeatly(this.sender.SendDataStream(), progressBar, repeats);
+            }
             else
-                this.receiver.DecodeStandard(this.sender.SendDataStream(), progressBar); 
+            {
+                this.sender = new Sender(cardsAmount, idLenght);
+                if (isPeriod)
+                    this.receiver.DecodPeriodically(this.sender.SendDataStream(), progressBar, period);
+                else
+                    this.receiver.DecodeStandard(this.sender.SendDataStream(), progressBar);
+            }
         }
         public int GetMinIteration()
         {
