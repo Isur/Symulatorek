@@ -271,6 +271,7 @@ namespace Gerwazy
                                 bases += " ";
                             }
                         }
+                        //Calculations leading to periodic change of bases
                         determinant += adder;
                         if (determinant > period || determinant < -period)
                         {

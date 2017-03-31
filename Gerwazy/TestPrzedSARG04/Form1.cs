@@ -73,6 +73,7 @@ namespace Gerwazy
             this.simulator = new Simulator((int)this.numericUpDown_keyQuantity.Value, (int)this.numericUpDown_keyLength.Value, 
                                             this.textBox_resultFileSource.Text, this.checkBox_periodicityDecode.Checked, 
                                             (int)this.numericUpDown_periodicitiDecode.Value, this.progressBar_decode);
+
             this.label_minIt.Text = this.simulator.GetMinIteration().ToString();
             this.label_maxIt.Text = this.simulator.GetMaxIteration().ToString();
             this.label_averageIt.Text = this.simulator.GetAvgIteration().ToString();
@@ -135,12 +136,16 @@ namespace Gerwazy
                 numericUpDown_oneKey.Enabled = true;
                 numericUpDown_keyQuantity.Value = 1;
                 numericUpDown_keyQuantity.Enabled = false;
+                checkBox_randomDecode.Checked = true;
+                checkBox_periodicityDecode.Enabled = false;
             }
             else
             {
                 label_oneKey.Enabled = false;
                 numericUpDown_oneKey.Enabled = false;
                 numericUpDown_keyQuantity.Enabled = true;
+                checkBox_periodicityDecode.Enabled = true;
+
             }
             if(checkBox_randomDecode.Checked ^ checkBox_periodicityDecode.Checked)
             {

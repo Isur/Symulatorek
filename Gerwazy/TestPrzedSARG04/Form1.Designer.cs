@@ -30,6 +30,8 @@
         {
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.groupBox_cards = new System.Windows.Forms.GroupBox();
+            this.label_oneKey = new System.Windows.Forms.Label();
+            this.numericUpDown_oneKey = new System.Windows.Forms.NumericUpDown();
             this.label_keyQuantity = new System.Windows.Forms.Label();
             this.label_keyLength = new System.Windows.Forms.Label();
             this.numericUpDown_keyQuantity = new System.Windows.Forms.NumericUpDown();
@@ -53,15 +55,13 @@
             this.button_resultFileSource = new System.Windows.Forms.Button();
             this.label_resultFileSource = new System.Windows.Forms.Label();
             this.progressBar_decode = new System.Windows.Forms.ProgressBar();
-            this.numericUpDown_oneKey = new System.Windows.Forms.NumericUpDown();
-            this.label_oneKey = new System.Windows.Forms.Label();
             this.groupBox_cards.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_oneKey)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_keyQuantity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_keyLength)).BeginInit();
             this.groupBox_decode.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_periodicitiDecode)).BeginInit();
             this.groupBox_shortResults.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_oneKey)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox_cards
@@ -78,6 +78,38 @@
             this.groupBox_cards.TabIndex = 0;
             this.groupBox_cards.TabStop = false;
             this.groupBox_cards.Text = "Karty";
+            // 
+            // label_oneKey
+            // 
+            this.label_oneKey.AutoSize = true;
+            this.label_oneKey.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label_oneKey.Location = new System.Drawing.Point(150, 80);
+            this.label_oneKey.Name = "label_oneKey";
+            this.label_oneKey.Size = new System.Drawing.Size(94, 13);
+            this.label_oneKey.TabIndex = 5;
+            this.label_oneKey.Text = "Ilość inkrementacji";
+            // 
+            // numericUpDown_oneKey
+            // 
+            this.numericUpDown_oneKey.Location = new System.Drawing.Point(20, 80);
+            this.numericUpDown_oneKey.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numericUpDown_oneKey.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown_oneKey.Name = "numericUpDown_oneKey";
+            this.numericUpDown_oneKey.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDown_oneKey.TabIndex = 4;
+            this.numericUpDown_oneKey.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // label_keyQuantity
             // 
@@ -345,28 +377,11 @@
             this.progressBar_decode.Size = new System.Drawing.Size(235, 40);
             this.progressBar_decode.TabIndex = 7;
             // 
-            // numericUpDown_oneKey
-            // 
-            this.numericUpDown_oneKey.Location = new System.Drawing.Point(20, 80);
-            this.numericUpDown_oneKey.Name = "numericUpDown_oneKey";
-            this.numericUpDown_oneKey.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown_oneKey.TabIndex = 4;
-            // 
-            // label_oneKey
-            // 
-            this.label_oneKey.AutoSize = true;
-            this.label_oneKey.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label_oneKey.Location = new System.Drawing.Point(150, 80);
-            this.label_oneKey.Name = "label_oneKey";
-            this.label_oneKey.Size = new System.Drawing.Size(94, 13);
-            this.label_oneKey.TabIndex = 5;
-            this.label_oneKey.Text = "Ilość inkrementacji";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(534, 291);
+            this.ClientSize = new System.Drawing.Size(534, 292);
             this.Controls.Add(this.progressBar_decode);
             this.Controls.Add(this.label_resultFileSource);
             this.Controls.Add(this.button_resultFileSource);
@@ -383,6 +398,7 @@
             this.Text = "Klucznik Gerwazy";
             this.groupBox_cards.ResumeLayout(false);
             this.groupBox_cards.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_oneKey)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_keyQuantity)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_keyLength)).EndInit();
             this.groupBox_decode.ResumeLayout(false);
@@ -390,7 +406,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_periodicitiDecode)).EndInit();
             this.groupBox_shortResults.ResumeLayout(false);
             this.groupBox_shortResults.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_oneKey)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
