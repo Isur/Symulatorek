@@ -52,6 +52,7 @@
             this.button_resultFileSource = new System.Windows.Forms.Button();
             this.label_resultFileSource = new System.Windows.Forms.Label();
             this.progressBar_decode = new System.Windows.Forms.ProgressBar();
+            this.checkBox_oneKey = new System.Windows.Forms.CheckBox();
             this.groupBox_cards.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_keyQuantity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_keyLength)).BeginInit();
@@ -140,6 +141,7 @@
             // 
             // groupBox_decode
             // 
+            this.groupBox_decode.Controls.Add(this.checkBox_oneKey);
             this.groupBox_decode.Controls.Add(this.numericUpDown_periodicitiDecode);
             this.groupBox_decode.Controls.Add(this.checkBox_periodicityDecode);
             this.groupBox_decode.Controls.Add(this.checkBox_randomDecode);
@@ -326,6 +328,18 @@
             this.progressBar_decode.Size = new System.Drawing.Size(235, 40);
             this.progressBar_decode.TabIndex = 7;
             // 
+            // checkBox_oneKey
+            // 
+            this.checkBox_oneKey.AutoSize = true;
+            this.checkBox_oneKey.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.checkBox_oneKey.Location = new System.Drawing.Point(20, 64);
+            this.checkBox_oneKey.Name = "checkBox_oneKey";
+            this.checkBox_oneKey.Size = new System.Drawing.Size(108, 17);
+            this.checkBox_oneKey.TabIndex = 3;
+            this.checkBox_oneKey.Text = "Pojedyńczy klucz";
+            this.checkBox_oneKey.UseVisualStyleBackColor = true;
+            this.checkBox_oneKey.CheckedChanged += new System.EventHandler(this.checkBox_oneKey_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -384,6 +398,7 @@
         private System.Windows.Forms.ProgressBar progressBar_decode;
         private System.Windows.Forms.Label label_timer;
         private System.Windows.Forms.Label label_executionTime;
+        private System.Windows.Forms.CheckBox checkBox_oneKey;
     }
 }
 

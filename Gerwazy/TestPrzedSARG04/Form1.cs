@@ -48,7 +48,7 @@ namespace Gerwazy
             }
             else
             {
-                button_start.Enabled = true;
+                readyToStart();
             }            
         }
         
@@ -81,35 +81,66 @@ namespace Gerwazy
             everything(true);
         }
 
-        private void checkBox_periodicityDecode_CheckedChanged(object sender, EventArgs e)
-        {
-            if(checkBox_periodicityDecode.Checked == true)
-            {
-                numericUpDown_periodicitiDecode.Enabled = true;
-            }
-            else
-            {
-                numericUpDown_periodicitiDecode.Enabled = false;
-            }
-            if (checkBox_periodicityDecode.Checked == true) checkBox_randomDecode.Checked = false;
-            else checkBox_randomDecode.Checked = true;
-        }
+
 
         private void numericUpDown_keyLength_ValueChanged(object sender, EventArgs e)
         {
             numericUpDown_keyQuantity.Maximum = (long)Math.Pow(2, ((long)numericUpDown_keyLength.Value - 1));
            
         }
-
-        private void checkBox_randomDecode_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox_randomDecode.Checked == true) checkBox_periodicityDecode.Checked = false;
-            else checkBox_periodicityDecode.Checked = true;
-        }
-
+                
         private void textBox_resultFileSource_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void checkBox_randomDecode_CheckedChanged(object sender, EventArgs e)
+        {
+            if(checkBox_randomDecode.Checked == true)
+            {
+                checkBox_periodicityDecode.Checked = false;
+                checkBox_oneKey.Checked = false;
+                numericUpDown_periodicitiDecode.Enabled = false;
+            }
+            readyToStart();
+        }
+
+        private void checkBox_periodicityDecode_CheckedChanged(object sender, EventArgs e)
+        {
+            if(checkBox_periodicityDecode.Checked == true)
+            {
+                checkBox_randomDecode.Checked = false;
+                checkBox_oneKey.Checked = false;
+                numericUpDown_periodicitiDecode.Enabled = true;
+            }
+            readyToStart();
+        }
+
+        private void checkBox_oneKey_CheckedChanged(object sender, EventArgs e)
+        {
+            if(checkBox_oneKey.Checked == true)
+            {
+                checkBox_randomDecode.Checked = false;
+                checkBox_periodicityDecode.Checked = false;
+                numericUpDown_periodicitiDecode.Enabled = false;
+            }
+            readyToStart();
+        }
+
+        private void readyToStart()
+        {
+            if (checkBox_oneKey.Checked == true)
+            {
+                label_keyQuantity.Text = "Ilość inkrementacji";
+            }
+            else label_keyQuantity.Text = "Ilość ID";
+            if(checkBox_randomDecode.Checked ^ checkBox_periodicityDecode.Checked ^ checkBox_oneKey.Checked)
+            {
+                if (textBox_resultFileSource.Text != "")
+                {
+                    button_start.Enabled = true;
+                }else button_start.Enabled = false;
+            }else button_start.Enabled = false;
         }
     }
 }
