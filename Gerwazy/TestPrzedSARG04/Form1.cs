@@ -99,7 +99,7 @@ namespace Gerwazy
             if(checkBox_randomDecode.Checked == true)
             {
                 checkBox_periodicityDecode.Checked = false;
-                checkBox_oneKey.Checked = false;
+                //  checkBox_oneKey.Checked = false;  
                 numericUpDown_periodicitiDecode.Enabled = false;
             }
             readyToStart();
@@ -110,7 +110,7 @@ namespace Gerwazy
             if(checkBox_periodicityDecode.Checked == true)
             {
                 checkBox_randomDecode.Checked = false;
-                checkBox_oneKey.Checked = false;
+                // checkBox_oneKey.Checked = false;
                 numericUpDown_periodicitiDecode.Enabled = true;
             }
             readyToStart();
@@ -120,9 +120,9 @@ namespace Gerwazy
         {
             if(checkBox_oneKey.Checked == true)
             {
-                checkBox_randomDecode.Checked = false;
-                checkBox_periodicityDecode.Checked = false;
-                numericUpDown_periodicitiDecode.Enabled = false;
+                //checkBox_randomDecode.Checked = false;
+                //checkBox_periodicityDecode.Checked = false;
+                //numericUpDown_periodicitiDecode.Enabled = false;
             }
             readyToStart();
         }
@@ -131,10 +131,18 @@ namespace Gerwazy
         {
             if (checkBox_oneKey.Checked == true)
             {
-                label_keyQuantity.Text = "Ilość inkrementacji";
+                label_oneKey.Enabled = true;
+                numericUpDown_oneKey.Enabled = true;
+                numericUpDown_keyQuantity.Value = 1;
+                numericUpDown_keyQuantity.Enabled = false;
             }
-            else label_keyQuantity.Text = "Ilość ID";
-            if(checkBox_randomDecode.Checked ^ checkBox_periodicityDecode.Checked ^ checkBox_oneKey.Checked)
+            else
+            {
+                label_oneKey.Enabled = false;
+                numericUpDown_oneKey.Enabled = false;
+                numericUpDown_keyQuantity.Enabled = true;
+            }
+            if(checkBox_randomDecode.Checked ^ checkBox_periodicityDecode.Checked)
             {
                 if (textBox_resultFileSource.Text != "")
                 {

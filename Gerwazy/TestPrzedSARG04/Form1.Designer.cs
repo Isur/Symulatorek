@@ -35,6 +35,7 @@
             this.numericUpDown_keyQuantity = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown_keyLength = new System.Windows.Forms.NumericUpDown();
             this.groupBox_decode = new System.Windows.Forms.GroupBox();
+            this.checkBox_oneKey = new System.Windows.Forms.CheckBox();
             this.numericUpDown_periodicitiDecode = new System.Windows.Forms.NumericUpDown();
             this.checkBox_periodicityDecode = new System.Windows.Forms.CheckBox();
             this.checkBox_randomDecode = new System.Windows.Forms.CheckBox();
@@ -52,24 +53,28 @@
             this.button_resultFileSource = new System.Windows.Forms.Button();
             this.label_resultFileSource = new System.Windows.Forms.Label();
             this.progressBar_decode = new System.Windows.Forms.ProgressBar();
-            this.checkBox_oneKey = new System.Windows.Forms.CheckBox();
+            this.numericUpDown_oneKey = new System.Windows.Forms.NumericUpDown();
+            this.label_oneKey = new System.Windows.Forms.Label();
             this.groupBox_cards.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_keyQuantity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_keyLength)).BeginInit();
             this.groupBox_decode.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_periodicitiDecode)).BeginInit();
             this.groupBox_shortResults.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_oneKey)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox_cards
             // 
+            this.groupBox_cards.Controls.Add(this.label_oneKey);
+            this.groupBox_cards.Controls.Add(this.numericUpDown_oneKey);
             this.groupBox_cards.Controls.Add(this.label_keyQuantity);
             this.groupBox_cards.Controls.Add(this.label_keyLength);
             this.groupBox_cards.Controls.Add(this.numericUpDown_keyQuantity);
             this.groupBox_cards.Controls.Add(this.numericUpDown_keyLength);
             this.groupBox_cards.Location = new System.Drawing.Point(12, 12);
             this.groupBox_cards.Name = "groupBox_cards";
-            this.groupBox_cards.Size = new System.Drawing.Size(271, 100);
+            this.groupBox_cards.Size = new System.Drawing.Size(271, 115);
             this.groupBox_cards.TabIndex = 0;
             this.groupBox_cards.TabStop = false;
             this.groupBox_cards.Text = "Karty";
@@ -147,14 +152,26 @@
             this.groupBox_decode.Controls.Add(this.checkBox_randomDecode);
             this.groupBox_decode.Location = new System.Drawing.Point(289, 12);
             this.groupBox_decode.Name = "groupBox_decode";
-            this.groupBox_decode.Size = new System.Drawing.Size(235, 100);
+            this.groupBox_decode.Size = new System.Drawing.Size(235, 115);
             this.groupBox_decode.TabIndex = 1;
             this.groupBox_decode.TabStop = false;
             this.groupBox_decode.Text = "Dekodowanie";
             // 
+            // checkBox_oneKey
+            // 
+            this.checkBox_oneKey.AutoSize = true;
+            this.checkBox_oneKey.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.checkBox_oneKey.Location = new System.Drawing.Point(20, 80);
+            this.checkBox_oneKey.Name = "checkBox_oneKey";
+            this.checkBox_oneKey.Size = new System.Drawing.Size(108, 17);
+            this.checkBox_oneKey.TabIndex = 3;
+            this.checkBox_oneKey.Text = "Pojedyńczy klucz";
+            this.checkBox_oneKey.UseVisualStyleBackColor = true;
+            this.checkBox_oneKey.CheckedChanged += new System.EventHandler(this.checkBox_oneKey_CheckedChanged);
+            // 
             // numericUpDown_periodicitiDecode
             // 
-            this.numericUpDown_periodicitiDecode.Location = new System.Drawing.Point(80, 40);
+            this.numericUpDown_periodicitiDecode.Location = new System.Drawing.Point(80, 50);
             this.numericUpDown_periodicitiDecode.Minimum = new decimal(new int[] {
             1,
             0,
@@ -173,7 +190,7 @@
             // 
             this.checkBox_periodicityDecode.AutoSize = true;
             this.checkBox_periodicityDecode.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.checkBox_periodicityDecode.Location = new System.Drawing.Point(20, 40);
+            this.checkBox_periodicityDecode.Location = new System.Drawing.Point(20, 50);
             this.checkBox_periodicityDecode.Name = "checkBox_periodicityDecode";
             this.checkBox_periodicityDecode.Size = new System.Drawing.Size(54, 17);
             this.checkBox_periodicityDecode.TabIndex = 1;
@@ -204,7 +221,7 @@
             this.groupBox_shortResults.Controls.Add(this.label_maxItQuantity);
             this.groupBox_shortResults.Controls.Add(this.label_minItQuantity);
             this.groupBox_shortResults.ForeColor = System.Drawing.Color.Black;
-            this.groupBox_shortResults.Location = new System.Drawing.Point(15, 164);
+            this.groupBox_shortResults.Location = new System.Drawing.Point(15, 179);
             this.groupBox_shortResults.Name = "groupBox_shortResults";
             this.groupBox_shortResults.Size = new System.Drawing.Size(200, 100);
             this.groupBox_shortResults.TabIndex = 2;
@@ -283,7 +300,7 @@
             // button_start
             // 
             this.button_start.ForeColor = System.Drawing.Color.Black;
-            this.button_start.Location = new System.Drawing.Point(289, 164);
+            this.button_start.Location = new System.Drawing.Point(289, 179);
             this.button_start.Name = "button_start";
             this.button_start.Size = new System.Drawing.Size(235, 100);
             this.button_start.TabIndex = 3;
@@ -293,7 +310,7 @@
             // 
             // textBox_resultFileSource
             // 
-            this.textBox_resultFileSource.Location = new System.Drawing.Point(12, 131);
+            this.textBox_resultFileSource.Location = new System.Drawing.Point(12, 146);
             this.textBox_resultFileSource.Name = "textBox_resultFileSource";
             this.textBox_resultFileSource.Size = new System.Drawing.Size(190, 20);
             this.textBox_resultFileSource.TabIndex = 4;
@@ -303,7 +320,7 @@
             // button_resultFileSource
             // 
             this.button_resultFileSource.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button_resultFileSource.Location = new System.Drawing.Point(208, 131);
+            this.button_resultFileSource.Location = new System.Drawing.Point(208, 146);
             this.button_resultFileSource.Name = "button_resultFileSource";
             this.button_resultFileSource.Size = new System.Drawing.Size(75, 20);
             this.button_resultFileSource.TabIndex = 5;
@@ -315,7 +332,7 @@
             // 
             this.label_resultFileSource.AutoSize = true;
             this.label_resultFileSource.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label_resultFileSource.Location = new System.Drawing.Point(12, 115);
+            this.label_resultFileSource.Location = new System.Drawing.Point(12, 130);
             this.label_resultFileSource.Name = "label_resultFileSource";
             this.label_resultFileSource.Size = new System.Drawing.Size(270, 13);
             this.label_resultFileSource.TabIndex = 6;
@@ -323,28 +340,33 @@
             // 
             // progressBar_decode
             // 
-            this.progressBar_decode.Location = new System.Drawing.Point(289, 118);
+            this.progressBar_decode.Location = new System.Drawing.Point(289, 133);
             this.progressBar_decode.Name = "progressBar_decode";
             this.progressBar_decode.Size = new System.Drawing.Size(235, 40);
             this.progressBar_decode.TabIndex = 7;
             // 
-            // checkBox_oneKey
+            // numericUpDown_oneKey
             // 
-            this.checkBox_oneKey.AutoSize = true;
-            this.checkBox_oneKey.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.checkBox_oneKey.Location = new System.Drawing.Point(20, 64);
-            this.checkBox_oneKey.Name = "checkBox_oneKey";
-            this.checkBox_oneKey.Size = new System.Drawing.Size(108, 17);
-            this.checkBox_oneKey.TabIndex = 3;
-            this.checkBox_oneKey.Text = "Pojedyńczy klucz";
-            this.checkBox_oneKey.UseVisualStyleBackColor = true;
-            this.checkBox_oneKey.CheckedChanged += new System.EventHandler(this.checkBox_oneKey_CheckedChanged);
+            this.numericUpDown_oneKey.Location = new System.Drawing.Point(20, 80);
+            this.numericUpDown_oneKey.Name = "numericUpDown_oneKey";
+            this.numericUpDown_oneKey.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDown_oneKey.TabIndex = 4;
+            // 
+            // label_oneKey
+            // 
+            this.label_oneKey.AutoSize = true;
+            this.label_oneKey.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label_oneKey.Location = new System.Drawing.Point(150, 80);
+            this.label_oneKey.Name = "label_oneKey";
+            this.label_oneKey.Size = new System.Drawing.Size(94, 13);
+            this.label_oneKey.TabIndex = 5;
+            this.label_oneKey.Text = "Ilość inkrementacji";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(534, 276);
+            this.ClientSize = new System.Drawing.Size(534, 291);
             this.Controls.Add(this.progressBar_decode);
             this.Controls.Add(this.label_resultFileSource);
             this.Controls.Add(this.button_resultFileSource);
@@ -355,8 +377,8 @@
             this.Controls.Add(this.groupBox_cards);
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MaximumSize = new System.Drawing.Size(550, 315);
-            this.MinimumSize = new System.Drawing.Size(550, 315);
+            this.MaximumSize = new System.Drawing.Size(550, 330);
+            this.MinimumSize = new System.Drawing.Size(550, 330);
             this.Name = "Form1";
             this.Text = "Klucznik Gerwazy";
             this.groupBox_cards.ResumeLayout(false);
@@ -368,6 +390,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_periodicitiDecode)).EndInit();
             this.groupBox_shortResults.ResumeLayout(false);
             this.groupBox_shortResults.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_oneKey)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -399,6 +422,8 @@
         private System.Windows.Forms.Label label_timer;
         private System.Windows.Forms.Label label_executionTime;
         private System.Windows.Forms.CheckBox checkBox_oneKey;
+        private System.Windows.Forms.Label label_oneKey;
+        private System.Windows.Forms.NumericUpDown numericUpDown_oneKey;
     }
 }
 
