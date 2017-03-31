@@ -12,6 +12,10 @@ namespace Gerwazy
         protected Card[] card;
 
         //METHODS
+        /// <summary>
+        /// Creates only one card with random ID
+        /// </summary>
+        /// <param name="idLength"></param>
         public Sender(int idLength)
         {
             Random random = new Random();
@@ -23,6 +27,11 @@ namespace Gerwazy
             }
             this.card[0] = new Card(Convert.ToString(value, 2));
         }
+        /// <summary>
+        /// Creates range of cards in even distances
+        /// </summary>
+        /// <param name="cardsAmount"></param>
+        /// <param name="idLength"></param>
         public Sender(int cardsAmount, int idLength)
         {
             this.card = new Card[cardsAmount];
