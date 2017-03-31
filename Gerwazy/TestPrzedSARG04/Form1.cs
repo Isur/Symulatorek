@@ -19,8 +19,6 @@ namespace Gerwazy
         {
             InitializeComponent();
 
-            Card card = new Card(Convert.ToString(13213, 2)); //to jest tylko do testów
-
             button_start.Enabled = false;
             progressBar_decode.Visible = false;
             checkBox_randomDecode.Checked = true;
@@ -74,15 +72,13 @@ namespace Gerwazy
 
             this.simulator = new Simulator((int)this.numericUpDown_keyQuantity.Value, (int)this.numericUpDown_keyLength.Value, 
                                             this.textBox_resultFileSource.Text, this.checkBox_periodicityDecode.Checked, 
-                                            (int)this.numericUpDown_periodicitiDecode.Value, this.progressBar_decode);// TU ROBOTA DLA CIEBIExD!  // FUNKCJA KTORA MA DZIALAC
+                                            (int)this.numericUpDown_periodicitiDecode.Value, this.progressBar_decode);
             this.label_minIt.Text = this.simulator.GetMinIteration().ToString();
             this.label_maxIt.Text = this.simulator.GetMaxIteration().ToString();
             this.label_averageIt.Text = this.simulator.GetAvgIteration().ToString();
             this.label_timer.Text = this.simulator.GetTimer().ToString();
 
             everything(true);
-            checkBox_periodicityDecode.Checked = false;
-            numericUpDown_periodicitiDecode.Enabled = false;
         }
 
         private void checkBox_periodicityDecode_CheckedChanged(object sender, EventArgs e)
