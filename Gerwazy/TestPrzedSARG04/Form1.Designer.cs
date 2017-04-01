@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.groupBox_cards = new System.Windows.Forms.GroupBox();
             this.label_oneKey = new System.Windows.Forms.Label();
@@ -381,7 +382,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(534, 292);
+            this.ClientSize = new System.Drawing.Size(534, 291);
             this.Controls.Add(this.progressBar_decode);
             this.Controls.Add(this.label_resultFileSource);
             this.Controls.Add(this.button_resultFileSource);
@@ -392,6 +393,7 @@
             this.Controls.Add(this.groupBox_cards);
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(550, 330);
             this.MinimumSize = new System.Drawing.Size(550, 330);
             this.Name = "Form1";
