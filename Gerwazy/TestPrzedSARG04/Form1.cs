@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Collections;
+using System.Threading;
 
 namespace Gerwazy
 {
@@ -87,8 +88,8 @@ namespace Gerwazy
 
         private void numericUpDown_keyLength_ValueChanged(object sender, EventArgs e)
         {
-            numericUpDown_keyQuantity.Maximum = (long)Math.Pow(2, ((long)numericUpDown_keyLength.Value - 1));
-           
+            if(numericUpDown_keyQuantity.Maximum <= 1000000) //dla testu
+                numericUpDown_keyQuantity.Maximum = (long)Math.Pow(2, ((long)numericUpDown_keyLength.Value - 1));           
         }
                 
         private void textBox_resultFileSource_TextChanged(object sender, EventArgs e)

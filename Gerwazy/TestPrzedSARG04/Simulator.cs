@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace Gerwazy
 {
@@ -16,6 +17,10 @@ namespace Gerwazy
         public Simulator(int cardsAmount, int idLenght, bool isPeriod, int period ,bool isRepeatable, int repeats, string path, ProgressBar progressBar)
         {
             this.receiver = new Receiver(path);
+
+            Form form = new Form();
+            Thread thread = new Thread(new ThreadStart(form.Activate));
+            thread.Start();
 
             if (isRepeatable)
             {
@@ -30,6 +35,8 @@ namespace Gerwazy
                 else
                     this.receiver.DecodeStandard(this.sender.SendDataStream(), progressBar);
             }
+
+            thread.Abort();
         }
         public int GetMinIteration()
         {

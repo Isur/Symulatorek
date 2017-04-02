@@ -94,7 +94,7 @@
             // 
             this.numericUpDown_oneKey.Location = new System.Drawing.Point(20, 80);
             this.numericUpDown_oneKey.Maximum = new decimal(new int[] {
-            1000,
+            1000000,
             0,
             0,
             0});
@@ -136,7 +136,7 @@
             // 
             this.numericUpDown_keyQuantity.Location = new System.Drawing.Point(20, 50);
             this.numericUpDown_keyQuantity.Maximum = new decimal(new int[] {
-            1000,
+            1,
             0,
             0,
             0});
@@ -382,7 +382,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(534, 291);
+            this.ClientSize = new System.Drawing.Size(534, 292);
             this.Controls.Add(this.progressBar_decode);
             this.Controls.Add(this.label_resultFileSource);
             this.Controls.Add(this.button_resultFileSource);
