@@ -90,7 +90,8 @@ namespace Gerwazy
 
         private void numericUpDown_keyLength_ValueChanged(object sender, EventArgs e)
         {
-            numericUpDown_keyQuantity.Maximum = (long)Math.Pow(2, ((long)numericUpDown_keyLength.Value - 1));           
+            numericUpDown_keyQuantity.Maximum = (long)Math.Pow(2, ((long)numericUpDown_keyLength.Value - 1));
+            if ((long)numericUpDown_keyQuantity.Maximum >= 450000) numericUpDown_keyQuantity.Maximum = 450000;
         }
                 
         private void textBox_resultFileSource_TextChanged(object sender, EventArgs e)
