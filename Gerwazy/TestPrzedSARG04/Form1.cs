@@ -42,15 +42,18 @@ namespace Gerwazy
             saveFileDialog1.Filter = "Text|*.txt|All|*.*";
             saveFileDialog1.ShowDialog();
             textBox_resultFileSource.Text = saveFileDialog1.FileName;
-            if (textBox_resultFileSource.Text.Substring(textBox_resultFileSource.TextLength - 4) != ".txt")
+            if(textBox_resultFileSource.TextLength > 4)
             {
-                button_start.Enabled = false;
-                MessageBox.Show("Wymagany plik o rozszerzeniu .txt", "Błąd!", MessageBoxButtons.OK);
+                if (textBox_resultFileSource.Text.Substring(textBox_resultFileSource.TextLength - 4) != ".txt")
+                {
+                    button_start.Enabled = false;
+                    MessageBox.Show("Wymagany plik o rozszerzeniu .txt", "Błąd!", MessageBoxButtons.OK);
+                }
+                else
+                {
+                    readyToStart();
+                }
             }
-            else
-            {
-                readyToStart();
-            }            
         }
         
         private void everything(bool xD)
