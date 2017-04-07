@@ -64,14 +64,7 @@ namespace Gerwazy
             button_start.Enabled = xD;
             button_resultFileSource.Enabled = xD;
             textBox_resultFileSource.Enabled = xD;
-
-            numericUpDown_oneKey.Enabled = false;
-            numericUpDown_periodicitiDecode.Enabled = false;
-            checkBox_oneKey.Checked = false;
-            checkBox_periodicityDecode.Checked = false;
-            checkBox_randomDecode.Checked = true;
-
-
+            readyToStart();
         }
 
         private void button_start_Click(object sender, EventArgs e)
