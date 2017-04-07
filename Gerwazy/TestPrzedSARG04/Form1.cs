@@ -56,13 +56,22 @@ namespace Gerwazy
         private void everything(bool xD)
         {
             numericUpDown_keyLength.Enabled = xD;
-            //numericUpDown_keyQuantity.Enabled = xD;
-            //numericUpDown_periodicitiDecode.Enabled = xD;
+            numericUpDown_keyQuantity.Enabled = xD;
+            numericUpDown_periodicitiDecode.Enabled = xD;
+            numericUpDown_oneKey.Enabled = xD;
             checkBox_periodicityDecode.Enabled = xD;
             checkBox_randomDecode.Enabled = xD;
             button_start.Enabled = xD;
             button_resultFileSource.Enabled = xD;
             textBox_resultFileSource.Enabled = xD;
+
+            numericUpDown_oneKey.Enabled = false;
+            numericUpDown_periodicitiDecode.Enabled = false;
+            checkBox_oneKey.Checked = false;
+            checkBox_periodicityDecode.Checked = false;
+            checkBox_randomDecode.Checked = true;
+
+
         }
 
         private void button_start_Click(object sender, EventArgs e)
