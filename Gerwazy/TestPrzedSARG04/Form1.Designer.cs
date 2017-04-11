@@ -205,6 +205,11 @@
             // numericUpDown_periodicitiDecode
             // 
             this.numericUpDown_periodicitiDecode.Location = new System.Drawing.Point(80, 50);
+            this.numericUpDown_periodicitiDecode.Maximum = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
             this.numericUpDown_periodicitiDecode.Minimum = new decimal(new int[] {
             1,
             0,
