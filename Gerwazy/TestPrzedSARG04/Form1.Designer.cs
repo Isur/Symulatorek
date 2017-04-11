@@ -94,7 +94,7 @@
             // 
             this.numericUpDown_oneKey.Location = new System.Drawing.Point(20, 80);
             this.numericUpDown_oneKey.Maximum = new decimal(new int[] {
-            1000000,
+            100000,
             0,
             0,
             0});
