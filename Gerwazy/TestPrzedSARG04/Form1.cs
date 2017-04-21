@@ -119,7 +119,7 @@ namespace Gerwazy
             if(checkBox_periodicityDecode.Checked == true)
             {
                 checkBox_randomDecode.Checked = false;
-                checkBox_oneKey.Checked = false;
+             //   checkBox_oneKey.Checked = false;
                 numericUpDown_periodicitiDecode.Enabled = true;
             }
             readyToStart();
@@ -142,11 +142,11 @@ namespace Gerwazy
             {
                 label_oneKey.Enabled = true;
                 numericUpDown_oneKey.Enabled = true;
-                numericUpDown_keyQuantity.Value = 1;
-                numericUpDown_keyQuantity.Enabled = false;
-                numericUpDown_periodicitiDecode.Enabled = false;
-                checkBox_randomDecode.Checked = true;
-                checkBox_periodicityDecode.Enabled = false;
+                //numericUpDown_keyQuantity.Value = 1;
+                numericUpDown_keyQuantity.Enabled = true;
+                numericUpDown_periodicitiDecode.Enabled = true;
+                //checkBox_randomDecode.Checked = true;
+                checkBox_periodicityDecode.Enabled = true;
             }
             else
             {
