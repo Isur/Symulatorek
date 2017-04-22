@@ -55,7 +55,22 @@ namespace Gerwazy
             long min = Consts.Power(2, idLength-1);
             long max = min * 2 - 1;
             long increment = cardsAmount > 1 ? (long)Math.Floor((decimal)((max - min) / (cardsAmount - 1))) : 0;
-            long current = min;
+            long current;
+
+            if(cardsAmount == 1)
+            {
+                Random random = new Random();
+                long value = Consts.Power(2, idLength - 1);
+                for (int i = 0; i <= idLength - 2; i++)
+                {
+                    value += random.Next(0, 2) == 1 ? Consts.Power(2, idLength - 2 - i) : 0;
+                }
+                current = value;
+            }
+            else
+            {
+                current = min;
+            }
             
             for(int i=0; i<cardsAmount; i++)
             {

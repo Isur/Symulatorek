@@ -77,10 +77,9 @@ namespace Gerwazy
             progressBar_decode.Maximum = (int) numericUpDown_keyQuantity.Value;
             everything(false);
 
-            this.simulator = new Simulator((int)this.numericUpDown_keyQuantity.Value, (int)this.numericUpDown_keyLength.Value, 
-                                            this.checkBox_periodicityDecode.Checked, (int)this.numericUpDown_periodicitiDecode.Value,
-                                            this.checkBox_oneKey.Checked, (int)this.numericUpDown_oneKey.Value,
-                                            this.textBox_resultFileSource.Text, this.progressBar_decode);
+            this.simulator = new Simulator(this.checkBox_randomDecode.Checked, this.checkBox_periodicityDecode.Checked, this.checkBox_oneKey.Checked, 
+                                            (int)this.numericUpDown_keyQuantity.Value, (int)this.numericUpDown_keyLength.Value, (int)this.numericUpDown_periodicitiDecode.Value,
+                                            (int)this.numericUpDown_oneKey.Value, this.textBox_resultFileSource.Text, this.progressBar_decode);
 
             this.label_minIt.Text = this.simulator.GetMinIteration().ToString();
             this.label_maxIt.Text = this.simulator.GetMaxIteration().ToString();
