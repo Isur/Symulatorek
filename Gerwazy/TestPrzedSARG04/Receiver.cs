@@ -66,6 +66,7 @@ namespace Gerwazy
                 //Loop for each card
                 for (int i = 0; i < cardAmount; i++)
                 {
+                    //Loop for repeatable decoding
                     for(int k = 0; k < (isRepeatable ? repeats : 1); k++)
                     {
                         //Saving card info
@@ -96,7 +97,7 @@ namespace Gerwazy
                             //Loop for each bit in card's ID
                             for (int j = 0; j < idLength; j++)
                             {
-                                //checking if bit hasn'y been decoded yet
+                                //checking if bit hasn't been decoded yet
                                 if (result[j] == Consts.Result[0])
                                 {
                                     //Setting base
@@ -180,7 +181,7 @@ namespace Gerwazy
                 //Saving final serults
                 saver.Save("Długość ID: " + idLength);
                 saver.Save("Ilość ID: " + cardAmount);
-                if(isRepeatable) saver.Save("Ilość powtórzeń każdego ID: " + repeats);
+                if(isRepeatable) saver.Save("Ilość inkrementacji każdego ID: " + repeats);
                 saver.Save("Minimalna ilość iteracji: " + this.minIteration.ToString());
                 saver.Save("Maksymalna ilość iteracji: " + this.maxIteration.ToString());
                 saver.Save("Średnia ilość iteracji: " + this.avgIteration.ToString());
