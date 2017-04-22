@@ -104,10 +104,9 @@ namespace Gerwazy
 
         private void checkBox_randomDecode_CheckedChanged(object sender, EventArgs e)
         {
-            if(checkBox_randomDecode.Checked == true)
+            if (checkBox_randomDecode.Checked == true)
             {
                 checkBox_periodicityDecode.Checked = false;
-                //checkBox_oneKey.Checked = false;  
                 numericUpDown_periodicitiDecode.Enabled = false;
             }
             readyToStart();
@@ -115,23 +114,20 @@ namespace Gerwazy
 
         private void checkBox_periodicityDecode_CheckedChanged(object sender, EventArgs e)
         {
-            if(checkBox_periodicityDecode.Checked == true)
+            if (checkBox_periodicityDecode.Checked == true)
             {
                 checkBox_randomDecode.Checked = false;
-             //   checkBox_oneKey.Checked = false;
                 numericUpDown_periodicitiDecode.Enabled = true;
+            }
+            else
+            {
+                numericUpDown_periodicitiDecode.Enabled = false;
             }
             readyToStart();
         }
 
         private void checkBox_oneKey_CheckedChanged(object sender, EventArgs e)
         {
-            if(checkBox_oneKey.Checked == true)
-            {
-                //checkBox_randomDecode.Checked = false;
-                checkBox_periodicityDecode.Checked = false;
-                numericUpDown_periodicitiDecode.Enabled = false;
-            }
             readyToStart();
         }
 
@@ -141,19 +137,12 @@ namespace Gerwazy
             {
                 label_oneKey.Enabled = true;
                 numericUpDown_oneKey.Enabled = true;
-                //numericUpDown_keyQuantity.Value = 1;
-                numericUpDown_keyQuantity.Enabled = true;
-                numericUpDown_periodicitiDecode.Enabled = true;
-                //checkBox_randomDecode.Checked = true;
-                checkBox_periodicityDecode.Enabled = true;
             }
             else
             {
                 label_oneKey.Enabled = false;
                 numericUpDown_oneKey.Enabled = false;
                 numericUpDown_keyQuantity.Enabled = true;
-                checkBox_periodicityDecode.Enabled = true;
-
             }
             if(checkBox_randomDecode.Checked ^ checkBox_periodicityDecode.Checked)
             {
