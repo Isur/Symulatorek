@@ -86,9 +86,9 @@
             this.label_oneKey.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label_oneKey.Location = new System.Drawing.Point(150, 80);
             this.label_oneKey.Name = "label_oneKey";
-            this.label_oneKey.Size = new System.Drawing.Size(94, 13);
+            this.label_oneKey.Size = new System.Drawing.Size(62, 13);
             this.label_oneKey.TabIndex = 5;
-            this.label_oneKey.Text = "Ilość inkrementacji";
+            this.label_oneKey.Text = "Ilość iteracji";
             // 
             // numericUpDown_oneKey
             // 
@@ -118,9 +118,9 @@
             this.label_keyQuantity.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label_keyQuantity.Location = new System.Drawing.Point(150, 50);
             this.label_keyQuantity.Name = "label_keyQuantity";
-            this.label_keyQuantity.Size = new System.Drawing.Size(43, 13);
+            this.label_keyQuantity.Size = new System.Drawing.Size(62, 13);
             this.label_keyQuantity.TabIndex = 3;
-            this.label_keyQuantity.Text = "Ilość ID";
+            this.label_keyQuantity.Text = "Ilość kluczy";
             // 
             // label_keyLength
             // 
@@ -128,9 +128,9 @@
             this.label_keyLength.ForeColor = System.Drawing.Color.Black;
             this.label_keyLength.Location = new System.Drawing.Point(150, 20);
             this.label_keyLength.Name = "label_keyLength";
-            this.label_keyLength.Size = new System.Drawing.Size(62, 13);
+            this.label_keyLength.Size = new System.Drawing.Size(82, 13);
             this.label_keyLength.TabIndex = 2;
-            this.label_keyLength.Text = "Długość ID";
+            this.label_keyLength.Text = "Długość klucza";
             // 
             // numericUpDown_keyQuantity
             // 
@@ -196,15 +196,15 @@
             this.checkBox_oneKey.ForeColor = System.Drawing.SystemColors.ControlText;
             this.checkBox_oneKey.Location = new System.Drawing.Point(20, 80);
             this.checkBox_oneKey.Name = "checkBox_oneKey";
-            this.checkBox_oneKey.Size = new System.Drawing.Size(108, 17);
+            this.checkBox_oneKey.Size = new System.Drawing.Size(154, 17);
             this.checkBox_oneKey.TabIndex = 3;
-            this.checkBox_oneKey.Text = "Pojedyńczy klucz";
+            this.checkBox_oneKey.Text = "Wielokrotna iteracja klucza";
             this.checkBox_oneKey.UseVisualStyleBackColor = true;
             this.checkBox_oneKey.CheckedChanged += new System.EventHandler(this.checkBox_oneKey_CheckedChanged);
             // 
             // numericUpDown_periodicitiDecode
             // 
-            this.numericUpDown_periodicitiDecode.Location = new System.Drawing.Point(80, 50);
+            this.numericUpDown_periodicitiDecode.Location = new System.Drawing.Point(100, 50);
             this.numericUpDown_periodicitiDecode.Maximum = new decimal(new int[] {
             20,
             0,
@@ -230,9 +230,9 @@
             this.checkBox_periodicityDecode.ForeColor = System.Drawing.SystemColors.ControlText;
             this.checkBox_periodicityDecode.Location = new System.Drawing.Point(20, 50);
             this.checkBox_periodicityDecode.Name = "checkBox_periodicityDecode";
-            this.checkBox_periodicityDecode.Size = new System.Drawing.Size(54, 17);
+            this.checkBox_periodicityDecode.Size = new System.Drawing.Size(74, 17);
             this.checkBox_periodicityDecode.TabIndex = 1;
-            this.checkBox_periodicityDecode.Text = "Okres";
+            this.checkBox_periodicityDecode.Text = "Okresowe";
             this.checkBox_periodicityDecode.UseVisualStyleBackColor = true;
             this.checkBox_periodicityDecode.CheckedChanged += new System.EventHandler(this.checkBox_periodicityDecode_CheckedChanged);
             // 
