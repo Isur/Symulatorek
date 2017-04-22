@@ -181,7 +181,7 @@ namespace Gerwazy
                 //Saving final serults
                 saver.Save("Długość ID: " + idLength);
                 saver.Save("Ilość ID: " + cardAmount);
-                if(isRepeatable) saver.Save("Ilość inkrementacji każdego ID: " + repeats);
+                if(isRepeatable) saver.Save("Ilość dekodowań każdego ID: " + repeats);
                 saver.Save("Minimalna ilość iteracji: " + this.minIteration.ToString());
                 saver.Save("Maksymalna ilość iteracji: " + this.maxIteration.ToString());
                 saver.Save("Średnia ilość iteracji: " + this.avgIteration.ToString());
