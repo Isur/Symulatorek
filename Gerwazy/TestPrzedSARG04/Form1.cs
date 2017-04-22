@@ -60,7 +60,6 @@ namespace Gerwazy
         {
             numericUpDown_keyLength.Enabled = xD;
             numericUpDown_keyQuantity.Enabled = xD;
-            numericUpDown_periodicitiDecode.Enabled = xD;
             numericUpDown_oneKey.Enabled = xD;
             checkBox_periodicityDecode.Enabled = xD;
             checkBox_randomDecode.Enabled = xD;
