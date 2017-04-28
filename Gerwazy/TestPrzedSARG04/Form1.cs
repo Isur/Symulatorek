@@ -166,13 +166,21 @@ namespace Gerwazy
                 everything(true);
 
                 decodingThreadTimer.Stop();
+
+                this.progressBar_decode.Value = GlobalProgress.Progress;
+            }
+            else
+            {
+                this.progressBar_decode.Value = GlobalProgress.Progress;
             }
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if(this.decodingThread != null)
+            if (this.decodingThread != null)
+            {
                 this.decodingThread.Abort();
+            }
         }
     }
 }
