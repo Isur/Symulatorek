@@ -32,12 +32,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.emailDawidLabel = new System.Windows.Forms.Label();
+            this.numberDawidLabel = new System.Windows.Forms.Label();
+            this.numberArturLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 52);
+            this.label1.Location = new System.Drawing.Point(12, 71);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(88, 13);
             this.label1.TabIndex = 0;
@@ -64,17 +67,47 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(131, 52);
+            this.label4.Location = new System.Drawing.Point(131, 71);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(153, 13);
             this.label4.TabIndex = 3;
             this.label4.Text = "bednarczykartur96@gmail.com";
             // 
+            // emailDawidLabel
+            // 
+            this.emailDawidLabel.AutoSize = true;
+            this.emailDawidLabel.Location = new System.Drawing.Point(131, 30);
+            this.emailDawidLabel.Name = "emailDawidLabel";
+            this.emailDawidLabel.Size = new System.Drawing.Size(116, 13);
+            this.emailDawidLabel.TabIndex = 4;
+            this.emailDawidLabel.Text = "dawids115@gmail.com";
+            // 
+            // numberDawidLabel
+            // 
+            this.numberDawidLabel.AutoSize = true;
+            this.numberDawidLabel.Location = new System.Drawing.Point(131, 43);
+            this.numberDawidLabel.Name = "numberDawidLabel";
+            this.numberDawidLabel.Size = new System.Drawing.Size(93, 13);
+            this.numberDawidLabel.TabIndex = 5;
+            this.numberDawidLabel.Text = "kom. 570 423 547";
+            // 
+            // numberArturLabel
+            // 
+            this.numberArturLabel.AutoSize = true;
+            this.numberArturLabel.Location = new System.Drawing.Point(131, 86);
+            this.numberArturLabel.Name = "numberArturLabel";
+            this.numberArturLabel.Size = new System.Drawing.Size(93, 13);
+            this.numberArturLabel.TabIndex = 6;
+            this.numberArturLabel.Text = "kom. 518 321 258";
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(307, 81);
+            this.ClientSize = new System.Drawing.Size(292, 108);
+            this.Controls.Add(this.numberArturLabel);
+            this.Controls.Add(this.numberDawidLabel);
+            this.Controls.Add(this.emailDawidLabel);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -92,5 +125,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label emailDawidLabel;
+        private System.Windows.Forms.Label numberDawidLabel;
+        private System.Windows.Forms.Label numberArturLabel;
     }
 }
