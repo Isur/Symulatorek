@@ -104,7 +104,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(292, 108);
+            this.ClientSize = new System.Drawing.Size(304, 111);
             this.Controls.Add(this.numberArturLabel);
             this.Controls.Add(this.numberDawidLabel);
             this.Controls.Add(this.emailDawidLabel);
@@ -112,6 +112,8 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.MaximumSize = new System.Drawing.Size(320, 150);
+            this.MinimumSize = new System.Drawing.Size(320, 150);
             this.Name = "Form2";
             this.Text = "O twórcach";
             this.ResumeLayout(false);
