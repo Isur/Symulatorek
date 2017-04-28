@@ -84,26 +84,17 @@ namespace Gerwazy
                                             (int)this.numericUpDown_oneKey.Value, this.textBox_resultFileSource.Text, this.progressBar_decode);
 
             this.decodingThread = new Thread(new ThreadStart(this.simulator.Decode));
-            this.decodingThread.Start();
             this.decodingThread.IsBackground = true;
+            this.decodingThread.Start();
             this.decodingThreadTimer.Start();
-
-            /**/
         }
-
-
 
         private void numericUpDown_keyLength_ValueChanged(object sender, EventArgs e)
         {
             numericUpDown_keyQuantity.Maximum = (long)Math.Pow(2, ((long)numericUpDown_keyLength.Value - 1));
             if ((long)numericUpDown_keyQuantity.Maximum >= 100000) numericUpDown_keyQuantity.Maximum = 100000;
         }
-                
-        private void textBox_resultFileSource_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
+              
         private void checkBox_randomDecode_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox_randomDecode.Checked == true)
@@ -175,13 +166,13 @@ namespace Gerwazy
 
                 decodingThreadTimer.Stop();
 
-                this.progressBar_decode.Value = GlobalProgress.Progress;
+                this.progressBar_decode.Value = GlobalVariables.Progress;
                 everything(true);
                 readyToStart();
             }
             else
             {
-                this.progressBar_decode.Value = GlobalProgress.Progress;
+                this.progressBar_decode.Value = GlobalVariables.Progress;
             }
         }
 
@@ -190,19 +181,16 @@ namespace Gerwazy
             if(this.decodingThread != null)
                 this.decodingThread.Abort();
         }
+
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
-           if(decodingThread == null)
+           if(decodingThread == null || decodingThread.IsAlive == false)
            {
                e.Cancel = false;
            }
-           else if (decodingThread.IsAlive == false)
+           else
            {
-               e.Cancel = false;
-           }
-           else if(decodingThread.IsAlive == true)
-           {
-                const string message = "Czy na pewno chcesz wyłączyć aplikację w trakcie działania?";
+                const string message = "Czy na pewno chcesz wyłączyć aplikację w trakcie obliczeń?";
                 const string caption = "Zamknij aplikację.";
                 var result = MessageBox.Show(message, caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result == DialogResult.No)

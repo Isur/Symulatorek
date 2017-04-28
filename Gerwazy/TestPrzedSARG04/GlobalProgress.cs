@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Gerwazy
 {
-    static class GlobalProgress
+    //Created to exchange data between threads (unprofessional but working)
+    static class GlobalVariables
     {
         static public int Progress;
     }

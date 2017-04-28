@@ -47,10 +47,8 @@ namespace Gerwazy
             //Random is needed for generating bases and sometimes results
             Random random = new Random(); 
 
-            //Setting prograss bar
-            //progressBar.Value = 0;
-            //progressBar.Maximum = cardAmount * (isRepeatable ? repeats : 1);
-            GlobalProgress.Progress = 0;
+            //Setting variable for prograss bar
+            GlobalVariables.Progress = 0;
 
             //Setting local variables needed for checking each iteration status
             int iteration = 0;
@@ -164,7 +162,7 @@ namespace Gerwazy
                         }
                         //Updating progressbar after succesfully decoded card
                         saver.SaveData("\n\n\n");
-                        GlobalProgress.Progress++;//progressBar.Value=1; ////////////////////////////////////////////////////////////////
+                        GlobalVariables.Progress++;
 
                         //Checking if new iteration number is min or max
                         this.minIteration = this.minIteration < iteration ? this.minIteration : iteration;

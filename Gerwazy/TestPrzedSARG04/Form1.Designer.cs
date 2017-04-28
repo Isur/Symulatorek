@@ -355,7 +355,6 @@
             this.textBox_resultFileSource.Size = new System.Drawing.Size(190, 20);
             this.textBox_resultFileSource.TabIndex = 4;
             this.textBox_resultFileSource.Click += new System.EventHandler(this.textBox_resultFileSource_Click);
-            this.textBox_resultFileSource.TextChanged += new System.EventHandler(this.textBox_resultFileSource_TextChanged);
             // 
             // button_resultFileSource
             // 
