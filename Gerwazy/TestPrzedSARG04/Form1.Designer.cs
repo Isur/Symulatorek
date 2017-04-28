@@ -387,6 +387,7 @@
             // 
             // decodingThreadTimer
             // 
+            this.decodingThreadTimer.Interval = 1;
             this.decodingThreadTimer.Tick += new System.EventHandler(this.decodingThreadTimer_Tick);
             // 
             // Form1
