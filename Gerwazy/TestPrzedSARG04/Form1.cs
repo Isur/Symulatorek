@@ -62,13 +62,14 @@ namespace Gerwazy
             numericUpDown_keyLength.Enabled = xD;
             numericUpDown_keyQuantity.Enabled = xD;
             numericUpDown_oneKey.Enabled = xD;
+            numericUpDown_periodicitiDecode.Enabled = xD;
             checkBox_periodicityDecode.Enabled = xD;
             checkBox_randomDecode.Enabled = xD;
             checkBox_oneKey.Enabled = xD;
             button_start.Enabled = xD;
             button_resultFileSource.Enabled = xD;
             textBox_resultFileSource.Enabled = xD;
-            readyToStart();
+            
         }
 
         private void button_start_Click(object sender, EventArgs e)
@@ -145,6 +146,15 @@ namespace Gerwazy
                 numericUpDown_oneKey.Enabled = false;
                 numericUpDown_keyQuantity.Enabled = true;
             }
+            if(checkBox_periodicityDecode.Checked == true)
+            {
+                numericUpDown_periodicitiDecode.Enabled = true;
+            }
+            else
+            {
+                numericUpDown_periodicitiDecode.Enabled = false;
+            }
+
             if(checkBox_randomDecode.Checked ^ checkBox_periodicityDecode.Checked)
             {
                 if (textBox_resultFileSource.Text != "")
@@ -164,23 +174,15 @@ namespace Gerwazy
                 this.label_timer.Text = this.simulator.GetTimer().ToString();
 
                 everything(true);
-
                 decodingThreadTimer.Stop();
-
-                this.progressBar_decode.Value = GlobalProgress.Progress;
-            }
-            else
-            {
-                this.progressBar_decode.Value = GlobalProgress.Progress;
+                readyToStart();
             }
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (this.decodingThread != null)
-            {
+            if(this.decodingThread != null)
                 this.decodingThread.Abort();
-            }
         }
     }
 }
