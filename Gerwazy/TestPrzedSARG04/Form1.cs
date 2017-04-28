@@ -190,5 +190,26 @@ namespace Gerwazy
             if(this.decodingThread != null)
                 this.decodingThread.Abort();
         }
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+           if(decodingThread == null)
+           {
+               e.Cancel = false;
+           }
+           else if (decodingThread.IsAlive == false)
+           {
+               e.Cancel = false;
+           }
+           else if(decodingThread.IsAlive == true)
+           {
+                const string message = "Czy na pewno chcesz wyłączyć aplikację w trakcie działania?";
+                const string caption = "Zamknij aplikację.";
+                var result = MessageBox.Show(message, caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.No)
+                {
+                    e.Cancel = true;
+                }
+            }
+        }
     }
 }
