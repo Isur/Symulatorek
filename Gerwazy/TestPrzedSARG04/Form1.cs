@@ -199,5 +199,17 @@ namespace Gerwazy
                 }
             }
         }
+
+        private void MenuItem_authorsInfo_Click(object sender, EventArgs e)
+        {
+            Form2 authors = new Form2();
+            authors.Show();
+        }
+
+        private void instrukcjaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form3 instruction = new Form3();
+            instruction.Show();
+        }
     }
 }

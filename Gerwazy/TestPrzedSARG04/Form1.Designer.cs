@@ -58,6 +58,9 @@
             this.label_resultFileSource = new System.Windows.Forms.Label();
             this.progressBar_decode = new System.Windows.Forms.ProgressBar();
             this.decodingThreadTimer = new System.Windows.Forms.Timer(this.components);
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.MenuItem_authorsInfo = new System.Windows.Forms.ToolStripMenuItem();
+            this.instrukcjaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox_cards.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_oneKey)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_keyQuantity)).BeginInit();
@@ -65,6 +68,7 @@
             this.groupBox_decode.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_periodicitiDecode)).BeginInit();
             this.groupBox_shortResults.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox_cards
@@ -75,9 +79,9 @@
             this.groupBox_cards.Controls.Add(this.label_keyLength);
             this.groupBox_cards.Controls.Add(this.numericUpDown_keyQuantity);
             this.groupBox_cards.Controls.Add(this.numericUpDown_keyLength);
-            this.groupBox_cards.Location = new System.Drawing.Point(12, 12);
+            this.groupBox_cards.Location = new System.Drawing.Point(10, 25);
             this.groupBox_cards.Name = "groupBox_cards";
-            this.groupBox_cards.Size = new System.Drawing.Size(271, 115);
+            this.groupBox_cards.Size = new System.Drawing.Size(270, 115);
             this.groupBox_cards.TabIndex = 0;
             this.groupBox_cards.TabStop = false;
             this.groupBox_cards.Text = "Karty";
@@ -185,7 +189,7 @@
             this.groupBox_decode.Controls.Add(this.numericUpDown_periodicitiDecode);
             this.groupBox_decode.Controls.Add(this.checkBox_periodicityDecode);
             this.groupBox_decode.Controls.Add(this.checkBox_randomDecode);
-            this.groupBox_decode.Location = new System.Drawing.Point(289, 12);
+            this.groupBox_decode.Location = new System.Drawing.Point(289, 25);
             this.groupBox_decode.Name = "groupBox_decode";
             this.groupBox_decode.Size = new System.Drawing.Size(235, 115);
             this.groupBox_decode.TabIndex = 1;
@@ -261,9 +265,9 @@
             this.groupBox_shortResults.Controls.Add(this.label_maxItQuantity);
             this.groupBox_shortResults.Controls.Add(this.label_minItQuantity);
             this.groupBox_shortResults.ForeColor = System.Drawing.Color.Black;
-            this.groupBox_shortResults.Location = new System.Drawing.Point(15, 179);
+            this.groupBox_shortResults.Location = new System.Drawing.Point(15, 192);
             this.groupBox_shortResults.Name = "groupBox_shortResults";
-            this.groupBox_shortResults.Size = new System.Drawing.Size(200, 100);
+            this.groupBox_shortResults.Size = new System.Drawing.Size(200, 107);
             this.groupBox_shortResults.TabIndex = 2;
             this.groupBox_shortResults.TabStop = false;
             this.groupBox_shortResults.Text = "Skrócone wyniki";
@@ -271,7 +275,7 @@
             // label_timer
             // 
             this.label_timer.AutoSize = true;
-            this.label_timer.Location = new System.Drawing.Point(120, 80);
+            this.label_timer.Location = new System.Drawing.Point(120, 93);
             this.label_timer.Name = "label_timer";
             this.label_timer.Size = new System.Drawing.Size(0, 13);
             this.label_timer.TabIndex = 7;
@@ -288,7 +292,7 @@
             // label_averageIt
             // 
             this.label_averageIt.AutoSize = true;
-            this.label_averageIt.Location = new System.Drawing.Point(120, 60);
+            this.label_averageIt.Location = new System.Drawing.Point(120, 73);
             this.label_averageIt.Name = "label_averageIt";
             this.label_averageIt.Size = new System.Drawing.Size(0, 13);
             this.label_averageIt.TabIndex = 5;
@@ -296,7 +300,7 @@
             // label_maxIt
             // 
             this.label_maxIt.AutoSize = true;
-            this.label_maxIt.Location = new System.Drawing.Point(120, 40);
+            this.label_maxIt.Location = new System.Drawing.Point(120, 53);
             this.label_maxIt.Name = "label_maxIt";
             this.label_maxIt.Size = new System.Drawing.Size(0, 13);
             this.label_maxIt.TabIndex = 4;
@@ -304,7 +308,7 @@
             // label_minIt
             // 
             this.label_minIt.AutoSize = true;
-            this.label_minIt.Location = new System.Drawing.Point(120, 20);
+            this.label_minIt.Location = new System.Drawing.Point(120, 33);
             this.label_minIt.Name = "label_minIt";
             this.label_minIt.Size = new System.Drawing.Size(0, 13);
             this.label_minIt.TabIndex = 3;
@@ -340,7 +344,7 @@
             // button_start
             // 
             this.button_start.ForeColor = System.Drawing.Color.Black;
-            this.button_start.Location = new System.Drawing.Point(289, 179);
+            this.button_start.Location = new System.Drawing.Point(289, 192);
             this.button_start.Name = "button_start";
             this.button_start.Size = new System.Drawing.Size(235, 100);
             this.button_start.TabIndex = 3;
@@ -350,7 +354,7 @@
             // 
             // textBox_resultFileSource
             // 
-            this.textBox_resultFileSource.Location = new System.Drawing.Point(12, 146);
+            this.textBox_resultFileSource.Location = new System.Drawing.Point(12, 159);
             this.textBox_resultFileSource.Name = "textBox_resultFileSource";
             this.textBox_resultFileSource.Size = new System.Drawing.Size(190, 20);
             this.textBox_resultFileSource.TabIndex = 4;
@@ -359,7 +363,7 @@
             // button_resultFileSource
             // 
             this.button_resultFileSource.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button_resultFileSource.Location = new System.Drawing.Point(208, 146);
+            this.button_resultFileSource.Location = new System.Drawing.Point(208, 159);
             this.button_resultFileSource.Name = "button_resultFileSource";
             this.button_resultFileSource.Size = new System.Drawing.Size(75, 20);
             this.button_resultFileSource.TabIndex = 5;
@@ -371,7 +375,7 @@
             // 
             this.label_resultFileSource.AutoSize = true;
             this.label_resultFileSource.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label_resultFileSource.Location = new System.Drawing.Point(12, 130);
+            this.label_resultFileSource.Location = new System.Drawing.Point(12, 143);
             this.label_resultFileSource.Name = "label_resultFileSource";
             this.label_resultFileSource.Size = new System.Drawing.Size(270, 13);
             this.label_resultFileSource.TabIndex = 6;
@@ -379,7 +383,7 @@
             // 
             // progressBar_decode
             // 
-            this.progressBar_decode.Location = new System.Drawing.Point(289, 133);
+            this.progressBar_decode.Location = new System.Drawing.Point(289, 146);
             this.progressBar_decode.Name = "progressBar_decode";
             this.progressBar_decode.Size = new System.Drawing.Size(235, 40);
             this.progressBar_decode.TabIndex = 7;
@@ -389,11 +393,36 @@
             this.decodingThreadTimer.Interval = 1;
             this.decodingThreadTimer.Tick += new System.EventHandler(this.decodingThreadTimer_Tick);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MenuItem_authorsInfo,
+            this.instrukcjaToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(534, 24);
+            this.menuStrip1.TabIndex = 8;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // MenuItem_authorsInfo
+            // 
+            this.MenuItem_authorsInfo.Name = "MenuItem_authorsInfo";
+            this.MenuItem_authorsInfo.Size = new System.Drawing.Size(80, 20);
+            this.MenuItem_authorsInfo.Text = "O twórcach";
+            this.MenuItem_authorsInfo.Click += new System.EventHandler(this.MenuItem_authorsInfo_Click);
+            // 
+            // instrukcjaToolStripMenuItem
+            // 
+            this.instrukcjaToolStripMenuItem.Name = "instrukcjaToolStripMenuItem";
+            this.instrukcjaToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
+            this.instrukcjaToolStripMenuItem.Text = "Instrukcja";
+            this.instrukcjaToolStripMenuItem.Click += new System.EventHandler(this.instrukcjaToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(534, 291);
+            this.ClientSize = new System.Drawing.Size(534, 311);
             this.Controls.Add(this.progressBar_decode);
             this.Controls.Add(this.label_resultFileSource);
             this.Controls.Add(this.button_resultFileSource);
@@ -402,11 +431,13 @@
             this.Controls.Add(this.groupBox_shortResults);
             this.Controls.Add(this.groupBox_decode);
             this.Controls.Add(this.groupBox_cards);
+            this.Controls.Add(this.menuStrip1);
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(550, 330);
-            this.MinimumSize = new System.Drawing.Size(550, 330);
+            this.MainMenuStrip = this.menuStrip1;
+            this.MaximumSize = new System.Drawing.Size(550, 350);
+            this.MinimumSize = new System.Drawing.Size(550, 350);
             this.Name = "Form1";
             this.Text = "Klucznik Gerwazy";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
@@ -420,6 +451,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_periodicitiDecode)).EndInit();
             this.groupBox_shortResults.ResumeLayout(false);
             this.groupBox_shortResults.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -454,6 +487,9 @@
         private System.Windows.Forms.Label label_oneKey;
         private System.Windows.Forms.NumericUpDown numericUpDown_oneKey;
         private System.Windows.Forms.Timer decodingThreadTimer;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem MenuItem_authorsInfo;
+        private System.Windows.Forms.ToolStripMenuItem instrukcjaToolStripMenuItem;
     }
 }
 
