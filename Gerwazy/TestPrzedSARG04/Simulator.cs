@@ -13,33 +13,29 @@ namespace Gerwazy
         protected Sender sender;
         protected Receiver receiver;
 
+        protected ProgressBar progressBar;
+        protected bool isRandom;
+        protected bool isPeriod;
+        protected bool isRepeatable;
+        protected int period;
+        protected int repeats;
+
         //METHODS 
         public Simulator(bool isRandom, bool isPeriod, bool isRepeatable, int cardsAmount, int idLenght, int period, int repeats, string path, ProgressBar progressBar)
         {
             this.receiver = new Receiver(path);
             this.sender = new Sender(cardsAmount, idLenght);
 
-            this.receiver.Decode(this.sender.SendDataStream(), progressBar, isRandom, isPeriod, isRepeatable, period, repeats);
-
-            //Form form = new Form();
-            //Thread thread = new Thread(new ThreadStart(form.Activate));
-            //thread.Start();
-
-            /*if (isRepeatable)
-            {
-                this.sender = new Sender(idLenght);
-                this.receiver.DecodeRepeatly(this.sender.SendDataStream(), progressBar, repeats);
-            }
-            else
-            {
-                this.sender = new Sender(cardsAmount, idLenght);
-                if (isPeriod)
-                    this.receiver.DecodPeriodically(this.sender.SendDataStream(), progressBar, period);
-                else
-                    this.receiver.DecodeStandard(this.sender.SendDataStream(), progressBar);
-            }*/
-
-            //thread.Abort();
+            this.progressBar = progressBar;
+            this.isPeriod = isPeriod;
+            this.isRandom = isRandom;
+            this.isRepeatable = isRepeatable;
+            this.period = period;
+            this.repeats = repeats;
+        }
+        public void Decode()
+        {
+            this.receiver.Decode(this.sender.SendDataStream(), this.progressBar, this.isRandom, this.isPeriod, this.isRepeatable, this.period, this.repeats);
         }
         public int GetMinIteration()
         {

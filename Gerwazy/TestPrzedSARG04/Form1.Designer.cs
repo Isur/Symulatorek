@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.groupBox_cards = new System.Windows.Forms.GroupBox();
@@ -56,6 +57,7 @@
             this.button_resultFileSource = new System.Windows.Forms.Button();
             this.label_resultFileSource = new System.Windows.Forms.Label();
             this.progressBar_decode = new System.Windows.Forms.ProgressBar();
+            this.decodingThreadTimer = new System.Windows.Forms.Timer(this.components);
             this.groupBox_cards.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_oneKey)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_keyQuantity)).BeginInit();
@@ -383,6 +385,10 @@
             this.progressBar_decode.Size = new System.Drawing.Size(235, 40);
             this.progressBar_decode.TabIndex = 7;
             // 
+            // decodingThreadTimer
+            // 
+            this.decodingThreadTimer.Tick += new System.EventHandler(this.decodingThreadTimer_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -403,6 +409,7 @@
             this.MinimumSize = new System.Drawing.Size(550, 330);
             this.Name = "Form1";
             this.Text = "Klucznik Gerwazy";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.groupBox_cards.ResumeLayout(false);
             this.groupBox_cards.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_oneKey)).EndInit();
@@ -446,6 +453,7 @@
         private System.Windows.Forms.CheckBox checkBox_oneKey;
         private System.Windows.Forms.Label label_oneKey;
         private System.Windows.Forms.NumericUpDown numericUpDown_oneKey;
+        private System.Windows.Forms.Timer decodingThreadTimer;
     }
 }
 

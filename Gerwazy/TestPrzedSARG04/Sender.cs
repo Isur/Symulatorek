@@ -16,7 +16,7 @@ namespace Gerwazy
         /// Creates only one card with random ID
         /// </summary>
         /// <param name="idLength"></param>
-        public Sender(int idLength)
+        /*public Sender(int idLength)
         {
             Random random = new Random();
             this.card = new Card[1];
@@ -26,7 +26,7 @@ namespace Gerwazy
                 value += random.Next(0, 2) == 1 ? Consts.Power(2, idLength - 2 - i) : 0;
             }
             this.card[0] = new Card(Convert.ToString(value, 2));
-        }
+        }*/
         /// <summary>
         /// Creates range of cards in even distances
         /// </summary>

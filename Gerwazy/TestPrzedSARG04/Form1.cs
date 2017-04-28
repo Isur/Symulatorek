@@ -15,6 +15,7 @@ namespace Gerwazy
     public partial class Form1 : Form
     {
         Simulator simulator;
+        Thread decodingThread;
 
         public Form1()
         {
@@ -73,19 +74,20 @@ namespace Gerwazy
         private void button_start_Click(object sender, EventArgs e)
         {
             progressBar_decode.Visible = true;
-            progressBar_decode.Maximum = (int) numericUpDown_keyQuantity.Value;
+            progressBar_decode.Maximum = (int) numericUpDown_keyQuantity.Value * (checkBox_oneKey.Checked ? (int)numericUpDown_oneKey.Value : 1);
             everything(false);
+
 
             this.simulator = new Simulator(this.checkBox_randomDecode.Checked, this.checkBox_periodicityDecode.Checked, this.checkBox_oneKey.Checked, 
                                             (int)this.numericUpDown_keyQuantity.Value, (int)this.numericUpDown_keyLength.Value, (int)this.numericUpDown_periodicitiDecode.Value,
                                             (int)this.numericUpDown_oneKey.Value, this.textBox_resultFileSource.Text, this.progressBar_decode);
 
-            this.label_minIt.Text = this.simulator.GetMinIteration().ToString();
-            this.label_maxIt.Text = this.simulator.GetMaxIteration().ToString();
-            this.label_averageIt.Text = this.simulator.GetAvgIteration().ToString();
-            this.label_timer.Text = this.simulator.GetTimer().ToString();
+            this.decodingThread = new Thread(new ThreadStart(this.simulator.Decode));
+            this.decodingThread.Start();
+            this.decodingThread.IsBackground = true;
+            this.decodingThreadTimer.Start();
 
-            everything(true);
+            /**/
         }
 
 
@@ -150,6 +152,27 @@ namespace Gerwazy
                     button_start.Enabled = true;
                 }else button_start.Enabled = false;
             }else button_start.Enabled = false;
+        }
+
+        private void decodingThreadTimer_Tick(object sender, EventArgs e)
+        {
+            if(decodingThread.ThreadState == ThreadState.Stopped)
+            {
+                this.label_minIt.Text = this.simulator.GetMinIteration().ToString();
+                this.label_maxIt.Text = this.simulator.GetMaxIteration().ToString();
+                this.label_averageIt.Text = this.simulator.GetAvgIteration().ToString();
+                this.label_timer.Text = this.simulator.GetTimer().ToString();
+
+                everything(true);
+
+                decodingThreadTimer.Stop();
+            }
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if(this.decodingThread != null)
+                this.decodingThread.Abort();
         }
     }
 }
