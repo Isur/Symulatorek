@@ -173,9 +173,15 @@ namespace Gerwazy
                 this.label_averageIt.Text = this.simulator.GetAvgIteration().ToString();
                 this.label_timer.Text = this.simulator.GetTimer().ToString();
 
-                everything(true);
                 decodingThreadTimer.Stop();
+
+                this.progressBar_decode.Value = GlobalProgress.Progress;
+                everything(true);
                 readyToStart();
+            }
+            else
+            {
+                this.progressBar_decode.Value = GlobalProgress.Progress;
             }
         }
 
