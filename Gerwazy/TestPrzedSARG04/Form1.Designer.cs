@@ -275,7 +275,7 @@
             // label_timer
             // 
             this.label_timer.AutoSize = true;
-            this.label_timer.Location = new System.Drawing.Point(120, 93);
+            this.label_timer.Location = new System.Drawing.Point(120, 80);
             this.label_timer.Name = "label_timer";
             this.label_timer.Size = new System.Drawing.Size(0, 13);
             this.label_timer.TabIndex = 7;
@@ -292,7 +292,7 @@
             // label_averageIt
             // 
             this.label_averageIt.AutoSize = true;
-            this.label_averageIt.Location = new System.Drawing.Point(120, 73);
+            this.label_averageIt.Location = new System.Drawing.Point(120, 60);
             this.label_averageIt.Name = "label_averageIt";
             this.label_averageIt.Size = new System.Drawing.Size(0, 13);
             this.label_averageIt.TabIndex = 5;
@@ -300,7 +300,7 @@
             // label_maxIt
             // 
             this.label_maxIt.AutoSize = true;
-            this.label_maxIt.Location = new System.Drawing.Point(120, 53);
+            this.label_maxIt.Location = new System.Drawing.Point(120, 40);
             this.label_maxIt.Name = "label_maxIt";
             this.label_maxIt.Size = new System.Drawing.Size(0, 13);
             this.label_maxIt.TabIndex = 4;
@@ -308,7 +308,7 @@
             // label_minIt
             // 
             this.label_minIt.AutoSize = true;
-            this.label_minIt.Location = new System.Drawing.Point(120, 33);
+            this.label_minIt.Location = new System.Drawing.Point(120, 20);
             this.label_minIt.Name = "label_minIt";
             this.label_minIt.Size = new System.Drawing.Size(0, 13);
             this.label_minIt.TabIndex = 3;

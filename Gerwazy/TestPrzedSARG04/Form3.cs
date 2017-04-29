@@ -15,6 +15,7 @@ namespace Gerwazy
         public Form3()
         {
             InitializeComponent();
+            pictureBox1.SizeMode = PictureBoxSizeMode.AutoSize;
         }
     }
 }
