@@ -343,6 +343,7 @@
             // 
             // button_start
             // 
+            this.button_start.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button_start.ForeColor = System.Drawing.Color.Black;
             this.button_start.Location = new System.Drawing.Point(289, 192);
             this.button_start.Name = "button_start";
