@@ -208,8 +208,19 @@ namespace Gerwazy
 
         private void instrukcjaToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void obsługaAplikacjiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             Form3 instruction = new Form3();
             instruction.Show();
+        }
+
+        private void opisPlikuWynikowegoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form4 instruction_result = new Form4();
+            instruction_result.Show();
         }
     }
 }
