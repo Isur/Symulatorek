@@ -85,7 +85,7 @@
             this.groupBox_cards.Size = new System.Drawing.Size(270, 115);
             this.groupBox_cards.TabIndex = 0;
             this.groupBox_cards.TabStop = false;
-            this.groupBox_cards.Text = "Karty";
+            this.groupBox_cards.Text = "ID";
             // 
             // label_oneKey
             // 
@@ -125,9 +125,9 @@
             this.label_keyQuantity.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label_keyQuantity.Location = new System.Drawing.Point(150, 50);
             this.label_keyQuantity.Name = "label_keyQuantity";
-            this.label_keyQuantity.Size = new System.Drawing.Size(62, 13);
+            this.label_keyQuantity.Size = new System.Drawing.Size(43, 13);
             this.label_keyQuantity.TabIndex = 3;
-            this.label_keyQuantity.Text = "Ilość kluczy";
+            this.label_keyQuantity.Text = "Ilość ID";
             // 
             // label_keyLength
             // 
@@ -135,9 +135,9 @@
             this.label_keyLength.ForeColor = System.Drawing.Color.Black;
             this.label_keyLength.Location = new System.Drawing.Point(150, 20);
             this.label_keyLength.Name = "label_keyLength";
-            this.label_keyLength.Size = new System.Drawing.Size(82, 13);
+            this.label_keyLength.Size = new System.Drawing.Size(62, 13);
             this.label_keyLength.TabIndex = 2;
-            this.label_keyLength.Text = "Długość klucza";
+            this.label_keyLength.Text = "Długość ID";
             // 
             // numericUpDown_keyQuantity
             // 
@@ -190,7 +190,7 @@
             this.groupBox_decode.Controls.Add(this.numericUpDown_periodicitiDecode);
             this.groupBox_decode.Controls.Add(this.checkBox_periodicityDecode);
             this.groupBox_decode.Controls.Add(this.checkBox_randomDecode);
-            this.groupBox_decode.Location = new System.Drawing.Point(289, 25);
+            this.groupBox_decode.Location = new System.Drawing.Point(290, 25);
             this.groupBox_decode.Name = "groupBox_decode";
             this.groupBox_decode.Size = new System.Drawing.Size(235, 115);
             this.groupBox_decode.TabIndex = 1;
@@ -203,9 +203,9 @@
             this.checkBox_oneKey.ForeColor = System.Drawing.SystemColors.ControlText;
             this.checkBox_oneKey.Location = new System.Drawing.Point(20, 80);
             this.checkBox_oneKey.Name = "checkBox_oneKey";
-            this.checkBox_oneKey.Size = new System.Drawing.Size(154, 17);
+            this.checkBox_oneKey.Size = new System.Drawing.Size(134, 17);
             this.checkBox_oneKey.TabIndex = 3;
-            this.checkBox_oneKey.Text = "Wielokrotna iteracja klucza";
+            this.checkBox_oneKey.Text = "Wielokrotna iteracja ID";
             this.checkBox_oneKey.UseVisualStyleBackColor = true;
             this.checkBox_oneKey.CheckedChanged += new System.EventHandler(this.checkBox_oneKey_CheckedChanged);
             // 
@@ -266,7 +266,7 @@
             this.groupBox_shortResults.Controls.Add(this.label_maxItQuantity);
             this.groupBox_shortResults.Controls.Add(this.label_minItQuantity);
             this.groupBox_shortResults.ForeColor = System.Drawing.Color.Black;
-            this.groupBox_shortResults.Location = new System.Drawing.Point(15, 192);
+            this.groupBox_shortResults.Location = new System.Drawing.Point(15, 190);
             this.groupBox_shortResults.Name = "groupBox_shortResults";
             this.groupBox_shortResults.Size = new System.Drawing.Size(200, 107);
             this.groupBox_shortResults.TabIndex = 2;
@@ -346,7 +346,7 @@
             // 
             this.button_start.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F);
             this.button_start.ForeColor = System.Drawing.Color.Black;
-            this.button_start.Location = new System.Drawing.Point(289, 192);
+            this.button_start.Location = new System.Drawing.Point(290, 200);
             this.button_start.Name = "button_start";
             this.button_start.Size = new System.Drawing.Size(235, 100);
             this.button_start.TabIndex = 3;
@@ -356,7 +356,7 @@
             // 
             // textBox_resultFileSource
             // 
-            this.textBox_resultFileSource.Location = new System.Drawing.Point(12, 159);
+            this.textBox_resultFileSource.Location = new System.Drawing.Point(10, 160);
             this.textBox_resultFileSource.Name = "textBox_resultFileSource";
             this.textBox_resultFileSource.Size = new System.Drawing.Size(190, 20);
             this.textBox_resultFileSource.TabIndex = 4;
@@ -365,7 +365,7 @@
             // button_resultFileSource
             // 
             this.button_resultFileSource.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button_resultFileSource.Location = new System.Drawing.Point(208, 159);
+            this.button_resultFileSource.Location = new System.Drawing.Point(210, 160);
             this.button_resultFileSource.Name = "button_resultFileSource";
             this.button_resultFileSource.Size = new System.Drawing.Size(75, 20);
             this.button_resultFileSource.TabIndex = 5;
@@ -377,7 +377,7 @@
             // 
             this.label_resultFileSource.AutoSize = true;
             this.label_resultFileSource.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label_resultFileSource.Location = new System.Drawing.Point(12, 143);
+            this.label_resultFileSource.Location = new System.Drawing.Point(10, 145);
             this.label_resultFileSource.Name = "label_resultFileSource";
             this.label_resultFileSource.Size = new System.Drawing.Size(270, 13);
             this.label_resultFileSource.TabIndex = 6;
@@ -385,7 +385,7 @@
             // 
             // progressBar_decode
             // 
-            this.progressBar_decode.Location = new System.Drawing.Point(289, 146);
+            this.progressBar_decode.Location = new System.Drawing.Point(290, 150);
             this.progressBar_decode.Name = "progressBar_decode";
             this.progressBar_decode.Size = new System.Drawing.Size(235, 40);
             this.progressBar_decode.TabIndex = 7;
