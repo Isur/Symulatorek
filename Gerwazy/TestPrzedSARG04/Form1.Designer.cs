@@ -93,9 +93,9 @@
             this.label_oneKey.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label_oneKey.Location = new System.Drawing.Point(150, 80);
             this.label_oneKey.Name = "label_oneKey";
-            this.label_oneKey.Size = new System.Drawing.Size(62, 13);
+            this.label_oneKey.Size = new System.Drawing.Size(71, 13);
             this.label_oneKey.TabIndex = 5;
-            this.label_oneKey.Text = "Ilość iteracji";
+            this.label_oneKey.Text = "Liczba iteracji";
             // 
             // numericUpDown_oneKey
             // 
@@ -125,9 +125,9 @@
             this.label_keyQuantity.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label_keyQuantity.Location = new System.Drawing.Point(150, 50);
             this.label_keyQuantity.Name = "label_keyQuantity";
-            this.label_keyQuantity.Size = new System.Drawing.Size(43, 13);
+            this.label_keyQuantity.Size = new System.Drawing.Size(52, 13);
             this.label_keyQuantity.TabIndex = 3;
-            this.label_keyQuantity.Text = "Ilość ID";
+            this.label_keyQuantity.Text = "Liczba ID";
             // 
             // label_keyLength
             // 
