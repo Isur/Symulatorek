@@ -179,11 +179,11 @@ namespace Gerwazy
 
                 //Saving final serults
                 saver.Save("Długość ID: " + idLength);
-                saver.Save("Ilość ID: " + cardAmount);
-                if(isRepeatable) saver.Save("Ilość dekodowań każdego ID: " + repeats);
-                saver.Save("Minimalna ilość iteracji: " + this.minIteration.ToString());
-                saver.Save("Maksymalna ilość iteracji: " + this.maxIteration.ToString());
-                saver.Save("Średnia ilość iteracji: " + this.avgIteration.ToString());
+                saver.Save("Liczba ID: " + cardAmount);
+                if(isRepeatable) saver.Save("Liczba dekodowań każdego ID: " + repeats);
+                saver.Save("Minimalna liczba iteracji: " + this.minIteration.ToString());
+                saver.Save("Maksymalna liczba iteracji: " + this.maxIteration.ToString());
+                saver.Save("Średnia liczba iteracji: " + this.avgIteration.ToString());
                 saver.Save("Całkowity czas obliczeń(mm:ss.ff): " + this.timer);
             }
         }
